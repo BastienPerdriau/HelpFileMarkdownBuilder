@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HelpFileMarkdownBuilder.Tests.Assembly2")]
+[assembly: AssemblyTitle("HelpFileMarkdownBuilder.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("HelpFileMarkdownBuilder.Tests.Assembly2")]
+[assembly: AssemblyProduct("HelpFileMarkdownBuilder.Tests")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cd71692b-027c-4a79-81b3-c3c4056aaed6")]
+[assembly: Guid("f20dc6ec-745f-4d66-bc6d-22e52bf15985")]
 
 // Version information for an assembly consists of the following four values:
 //

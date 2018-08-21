@@ -19,9 +19,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests.Assembly1", "Tests\HelpFileMarkdownBuilder.Tests.Assembly1\HelpFileMarkdownBuilder.Tests.Assembly1.csproj", "{B2BAA4F6-2B4F-4870-BE9D-F5118FBDCB33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests.Assembly2", "HelpFileMarkdownBuilder.Tests.Assembly2\HelpFileMarkdownBuilder.Tests.Assembly2.csproj", "{CD71692B-027C-4A79-81B3-C3C4056AAED6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests.Assembly2", "Tests\HelpFileMarkdownBuilder.Tests.Assembly2\HelpFileMarkdownBuilder.Tests.Assembly2.csproj", "{6CE5E7FB-91C2-4F14-87A3-61F68388D856}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests", "HelpFileMarkdownBuilder.Tests\HelpFileMarkdownBuilder.Tests.csproj", "{8C049D77-F817-4714-81F9-295CE8E9FBE9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests", "Tests\HelpFileMarkdownBuilder.Tests\HelpFileMarkdownBuilder.Tests.csproj", "{F20DC6EC-745F-4D66-BC6D-22E52BF15985}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,14 +49,14 @@ Global
 		{B2BAA4F6-2B4F-4870-BE9D-F5118FBDCB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2BAA4F6-2B4F-4870-BE9D-F5118FBDCB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2BAA4F6-2B4F-4870-BE9D-F5118FBDCB33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CD71692B-027C-4A79-81B3-C3C4056AAED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD71692B-027C-4A79-81B3-C3C4056AAED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD71692B-027C-4A79-81B3-C3C4056AAED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD71692B-027C-4A79-81B3-C3C4056AAED6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C049D77-F817-4714-81F9-295CE8E9FBE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C049D77-F817-4714-81F9-295CE8E9FBE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C049D77-F817-4714-81F9-295CE8E9FBE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C049D77-F817-4714-81F9-295CE8E9FBE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CE5E7FB-91C2-4F14-87A3-61F68388D856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CE5E7FB-91C2-4F14-87A3-61F68388D856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CE5E7FB-91C2-4F14-87A3-61F68388D856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CE5E7FB-91C2-4F14-87A3-61F68388D856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F20DC6EC-745F-4D66-BC6D-22E52BF15985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F20DC6EC-745F-4D66-BC6D-22E52BF15985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F20DC6EC-745F-4D66-BC6D-22E52BF15985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F20DC6EC-745F-4D66-BC6D-22E52BF15985}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,8 +67,8 @@ Global
 		{13E230BA-4E30-44E7-ACC6-B88886D4FBD0} = {054B765E-4F2C-450F-97E5-DAA06EEFEF16}
 		{729EDF9C-310C-4F4E-B284-8C3F1009A79A} = {054B765E-4F2C-450F-97E5-DAA06EEFEF16}
 		{B2BAA4F6-2B4F-4870-BE9D-F5118FBDCB33} = {E6F84C64-5D60-4FFF-AEDA-90719417C196}
-		{CD71692B-027C-4A79-81B3-C3C4056AAED6} = {E6F84C64-5D60-4FFF-AEDA-90719417C196}
-		{8C049D77-F817-4714-81F9-295CE8E9FBE9} = {E6F84C64-5D60-4FFF-AEDA-90719417C196}
+		{6CE5E7FB-91C2-4F14-87A3-61F68388D856} = {E6F84C64-5D60-4FFF-AEDA-90719417C196}
+		{F20DC6EC-745F-4D66-BC6D-22E52BF15985} = {E6F84C64-5D60-4FFF-AEDA-90719417C196}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {794D52BA-CE65-45AF-B660-12DFA562AB47}

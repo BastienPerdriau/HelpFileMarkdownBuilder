@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8C049D77-F817-4714-81F9-295CE8E9FBE9}</ProjectGuid>
+    <ProjectGuid>{F20DC6EC-745F-4D66-BC6D-22E52BF15985}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>HelpFileMarkdownBuilder.Tests</RootNamespace>
     <AssemblyName>HelpFileMarkdownBuilder.Tests</AssemblyName>
@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
