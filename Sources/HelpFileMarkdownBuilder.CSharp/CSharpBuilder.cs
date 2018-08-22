@@ -1,8 +1,6 @@
 ﻿using HelpFileMarkdownBuilder.Base;
-using HelpFileMarkdownBuilder.CSharp.Serialization;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -21,20 +19,65 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// <returns>Markdown documentation generated from build</returns>
         public override List<HelpFile> BuildHelpFiles()
         {
+            //foreach (string file in SourceFiles)
+            //{
+            //    XmlDoc docFile = CSXmlDeserializer.Deserialize(file);
+
+            //    List<string> tmp = docFile.Members.Select(m => m.Name.Substring(0, 1)).Distinct().ToList();
+
+            //    string xml = File.ReadAllText(file);
+            //    XDocument doc = XDocument.Parse(xml);
+            //    string md = doc.Root.ToMarkDown();
+            //}
+
+            List<string> projectFiles = GetProjectFiles();
+
+
+
             List<HelpFile> results = new List<HelpFile>();
 
-            foreach (string file in SourceFiles)
+            return results;
+        }
+
+        /// <summary>
+        /// Gets the project files from source files
+        /// </summary>
+        /// <returns>List of project files</returns>
+        private List<string> GetProjectFiles()
+        {
+            List<string> projectFiles = new List<string>();
+
+            foreach (string sourceFile in SourceFiles)
             {
-                XmlDoc docFile = CSXmlDeserializer.Deserialize(file);
-
-                List<string> tmp = docFile.Members.Select(m => m.Name.Substring(0, 1)).Distinct().ToList();
-
-                string xml = File.ReadAllText(file);
-                XDocument doc = XDocument.Parse(xml);
-                string md = doc.Root.ToMarkDown();
+                if (Regex.IsMatch(sourceFile, @"([a-zA-Z\u00C0-\u024F0-9\s_\\.\-\(\):])+(\.csproj)$", RegexOptions.IgnoreCase))
+                {
+                    projectFiles.Add(sourceFile);
+                }
+                else if (Regex.IsMatch(sourceFile, @"([a-zA-Z\u00C0-\u024F0-9\s_\\.\-\(\):])+(\.sln)$", RegexOptions.IgnoreCase))
+                {
+                    // TODO Get all csproj files from sln file
+                }
+                else
+                {
+                    // TODO Logs warn source file not good
+                }
             }
 
-            return results;
+            return projectFiles;
+        }
+
+        /// <summary>
+        /// Gets the project files from solution file
+        /// </summary>
+        /// <param name="solutionFile">Solution file</param>
+        /// <returns>List of project files in solution file</returns>
+        private List<string> GetProjectFilesFromSolutionFile(string solutionFile)
+        {
+            List<string> projectFiles = new List<string>();
+
+            // TODO Parse solution file to get csproj files
+
+            return projectFiles;
         }
     }
 

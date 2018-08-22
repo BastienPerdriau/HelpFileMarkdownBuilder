@@ -1,21 +1,21 @@
 ﻿using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.Serialization
+namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
 {
     /// <summary>
-    /// Documentation about a typeparam
+    /// Documentation about a param
     /// </summary>
-    [XmlType("typeparam")]
-    public class XmlTypeParam
+    [XmlType("param")]
+    public class XmlParam
     {
         /// <summary>
-        /// Name of the typeparam
+        /// Name of the param
         /// </summary>
         [XmlAttribute("name")]
         public string Name { get; set; } = string.Empty;
 
         /// <summary>
-        /// Value of the typeparam
+        /// Value of the param
         /// </summary>
         [XmlText]
         public string Value { get; set; } = string.Empty;

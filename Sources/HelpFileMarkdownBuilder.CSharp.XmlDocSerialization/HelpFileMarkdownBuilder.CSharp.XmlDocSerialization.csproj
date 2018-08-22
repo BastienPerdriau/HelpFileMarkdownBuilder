@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70EF9D45-67BE-4B0A-993F-534B2B9883C7}</ProjectGuid>
+    <ProjectGuid>{729EDF9C-310C-4F4E-B284-8C3F1009A79A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelpFileMarkdownBuilder</RootNamespace>
-    <AssemblyName>HelpFileMarkdownBuilder</AssemblyName>
+    <RootNamespace>HelpFileMarkdownBuilder.CSharp.XmlDocSerialization</RootNamespace>
+    <AssemblyName>HelpFileMarkdownBuilder.CSharp.XmlDocSerialization</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <LangVersion>latest</LangVersion>
-    <DocumentationFile>bin\Debug\HelpFileMarkdownBuilder.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -30,7 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\HelpFileMarkdownBuilder.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -46,24 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enumeration.cs" />
-    <Compile Include="HelpFileBuilder.cs" />
-    <Compile Include="Language.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.Base\HelpFileMarkdownBuilder.Base.csproj">
-      <Project>{6397732c-b4cf-49d7-842f-8e80b52cdeb2}</Project>
-      <Name>HelpFileMarkdownBuilder.Base</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.csproj">
-      <Project>{729edf9c-310c-4f4e-b284-8c3f1009a79a}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp.XmlDocSerialization</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp\HelpFileMarkdownBuilder.CSharp.csproj">
-      <Project>{13e230ba-4e30-44e7-acc6-b88886d4fbd0}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp</Name>
-    </ProjectReference>
+    <Compile Include="XmlAssembly.cs" />
+    <Compile Include="XmlAssemblyName.cs" />
+    <Compile Include="XmlCSDeserializer.cs" />
+    <Compile Include="XmlDoc.cs" />
+    <Compile Include="XmlMember.cs" />
+    <Compile Include="XmlMemberSummary.cs" />
+    <Compile Include="XmlParam.cs" />
+    <Compile Include="XmlTypeParam.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

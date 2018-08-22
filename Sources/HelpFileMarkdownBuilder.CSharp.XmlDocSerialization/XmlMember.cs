@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.Serialization
+namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
 {
     /// <summary>
     /// Documentation about a member

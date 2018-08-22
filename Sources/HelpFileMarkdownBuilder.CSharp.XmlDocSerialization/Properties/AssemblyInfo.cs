@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HelpFileMarkdownBuilder.CSharp.Serialization")]
+[assembly: AssemblyTitle("HelpFileMarkdownBuilder.CSharp.XmlDocSerialization")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bastien Perdriau")]
-[assembly: AssemblyProduct("HelpFileMarkdownBuilder.CSharp.Serialization")]
+[assembly: AssemblyProduct("HelpFileMarkdownBuilder.CSharp.XmlDocSerialization")]
 [assembly: AssemblyCopyright("Copyright © Bastien Perdriau 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
