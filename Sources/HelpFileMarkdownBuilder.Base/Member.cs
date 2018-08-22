@@ -6,9 +6,9 @@
     public abstract class Member
     {
         /// <summary>
-        /// Return the string value of the markdown from this member
+        /// Return the help file to build
         /// </summary>
-        /// <returns>String value of markdown</returns>
-        public abstract string ToMarkdown();
+        /// <returns>Help file to build</returns>
+        public abstract HelpFile ToMarkdown();
     }
 }

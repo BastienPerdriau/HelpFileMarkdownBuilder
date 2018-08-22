@@ -50,5 +50,19 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Sources\HelpFileMarkdownBuilder\HelpFileMarkdownBuilder.csproj">
+      <Project>{70ef9d45-67be-4b0a-993f-534b2b9883c7}</Project>
+      <Name>HelpFileMarkdownBuilder</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Examples\SharePointRunner.SDK.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Examples\SharePointRunner.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

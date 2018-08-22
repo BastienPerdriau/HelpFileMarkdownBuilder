@@ -16,12 +16,12 @@ namespace HelpFileMarkdownBuilder.CSharp
     public class CSharpBuilder : Builder
     {
         /// <summary>
-        /// Build help files from XML documentation files
+        /// Build help files from XML documentation files and assemblies
         /// </summary>
-        /// <returns>XML documentation generated from build</returns>
-        public override List<string> BuildHelpFiles()
+        /// <returns>Markdown documentation generated from build</returns>
+        public override List<HelpFile> BuildHelpFiles()
         {
-            List<string> results = new List<string>();
+            List<HelpFile> results = new List<HelpFile>();
 
             foreach (string file in SourceFiles)
             {
@@ -32,8 +32,6 @@ namespace HelpFileMarkdownBuilder.CSharp
                 string xml = File.ReadAllText(file);
                 XDocument doc = XDocument.Parse(xml);
                 string md = doc.Root.ToMarkDown();
-
-                results.Add(md);
             }
 
             return results;

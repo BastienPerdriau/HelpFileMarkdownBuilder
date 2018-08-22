@@ -1,0 +1,466 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SharePointRunner.SDK</name>
+    </assembly>
+    <members>
+        <member name="T:SharePointRunner.SDK.Receiver">
+            <summary>
+            Base class of receiver of running process
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.Receiver.IncludeSubSites">
+            <summary>
+            True if the receiver needs to include sub sites when running, False if not
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.Receiver.IncludeHiddenLists">
+            <summary>
+            True if the receiver needs to include hidden lists when running, False if not
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.Receiver.runningLevels">
+            <summary>
+            List of running levels implemented by the receiver
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.IsMethodOverriden(System.Type,System.String,System.Boolean)">
+            <summary>
+            Know if the type has his own declaration of the method
+            </summary>
+            <param name="type">The type to check</param>
+            <param name="methodName">Name of the method</param>
+            <param name="includeAbstractDeclaration">True if an abstract implementation should be included, False if not (False by default)</param>
+            <returns>True if the type has his own declaration of the method, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.IsMethodOverriden(System.Reflection.MethodInfo,System.Boolean)">
+            <summary>
+            Know if the method is overriden
+            </summary>
+            <param name="method">Method</param>
+            <param name="includeAbstractDeclaration">True if an abstract implementation should be included, False if not (False by default)</param>
+            <returns>True if the type has his own declaration of the method, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnStart">
+            <summary>
+            Event at the start of process
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTenantRunningStart(Microsoft.Online.SharePoint.TenantAdministration.Tenant)">
+            <summary>
+            Event at the start of handling a tenant 
+            </summary>
+            <param name="tenant">Tenant</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermStoreRunningStart(Microsoft.SharePoint.Client.Taxonomy.TermStore)">
+            <summary>
+            Event at the start of handling the term store
+            </summary>
+            <param name="termStore">Term store</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermGroupRunningStart(Microsoft.SharePoint.Client.Taxonomy.TermGroup)">
+            <summary>
+            Event at the start of handling a term group
+            </summary>
+            <param name="termGroup">Term group</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermSetRunningStart(Microsoft.SharePoint.Client.Taxonomy.TermSet)">
+            <summary>
+            Event at the start of handling a term set
+            </summary>
+            <param name="termSet">Term set</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermRunningStart(Microsoft.SharePoint.Client.Taxonomy.Term)">
+            <summary>
+            Event at the start of handling a term
+            </summary>
+            <param name="term">Term</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermRunningEnd(Microsoft.SharePoint.Client.Taxonomy.Term)">
+            <summary>
+            Event at the end of handling a term
+            </summary>
+            <param name="term">Term</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermSetRunningEnd(Microsoft.SharePoint.Client.Taxonomy.TermSet)">
+            <summary>
+            Event at the end of handling a term set
+            </summary>
+            <param name="termSet">Term set</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermGroupRunningEnd(Microsoft.SharePoint.Client.Taxonomy.TermGroup)">
+            <summary>
+            Event at the end of handling a term group
+            </summary>
+            <param name="termGroup">Term group</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTermStoreRunningEnd(Microsoft.SharePoint.Client.Taxonomy.TermStore)">
+            <summary>
+            Event at the end of handling the term store
+            </summary>
+            <param name="termStore">Term store</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnSiteCollectionRunningStart(Microsoft.SharePoint.Client.Site,Microsoft.SharePoint.Client.Web)">
+            <summary>
+            Event at the start of handling a site collection
+            </summary>
+            <param name="site">Site collection</param>
+            <param name="rootWeb">Root site</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnGroupRunning(Microsoft.SharePoint.Client.Group)">
+            <summary>
+            Event to handle a group
+            </summary>
+            <param name="group">Group</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnSiteRunningStart(Microsoft.SharePoint.Client.Web)">
+            <summary>
+            Event at the start of handling a site
+            </summary>
+            <param name="web">Site</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnListRunningStart(Microsoft.SharePoint.Client.List)">
+            <summary>
+            Event at the start of handling a list
+            </summary>
+            <param name="list">List</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnViewRunning(Microsoft.SharePoint.Client.View)">
+            <summary>
+            Event to handle a view
+            </summary>
+            <param name="view">View</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnFolderRunningStart(Microsoft.SharePoint.Client.Folder)">
+            <summary>
+            Event at the start of handling a folder
+            </summary>
+            <param name="folder">Folder</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnListItemRunning(Microsoft.SharePoint.Client.ListItem)">
+            <summary>
+            Event to handle a list item
+            </summary>
+            <param name="listItem">List item</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnFileRunning(Microsoft.SharePoint.Client.File)">
+            <summary>
+            Event to handle a file
+            </summary>
+            <param name="file">File</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnFolderRunningEnd(Microsoft.SharePoint.Client.Folder)">
+            <summary>
+            Event at the end of handling a folder
+            </summary>
+            <param name="folder">Folder</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnFolderRunningEndAfterSubFolders(Microsoft.SharePoint.Client.Folder)">
+            <summary>
+            Event at the end of handling sub folders of a folder
+            </summary>
+            <param name="folder">Folder</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnListRunningEnd(Microsoft.SharePoint.Client.List)">
+            <summary>
+            Event at the end of handling a list
+            </summary>
+            <param name="list">List</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnSiteRunningEnd(Microsoft.SharePoint.Client.Web)">
+            <summary>
+            Event at the end of handling a site
+            </summary>
+            <param name="web">Site</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnSiteRunningEndAfterSubSites(Microsoft.SharePoint.Client.Web)">
+            <summary>
+            Event at the end of handling sub sites of a site
+            </summary>
+            <param name="web">Site</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnSiteCollectionRunningEnd(Microsoft.SharePoint.Client.Site,Microsoft.SharePoint.Client.Web)">
+            <summary>
+            Event at the end of handling a site collection
+            </summary>
+            <param name="site">Site collection</param>
+            <param name="rootWeb">Root site</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnTenantRunningEnd(Microsoft.Online.SharePoint.TenantAdministration.Tenant)">
+            <summary>
+            Event at the end of handling a tenant 
+            </summary>
+            <param name="tenant">Tenant</param>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.OnEnd">
+            <summary>
+            Event et the end of the process
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.IsReceiverCalled(SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Know if the receiver should be called at a specific running level
+            </summary>
+            <param name="runningLevel">Running level</param>
+            <returns>True if the receiver should be called, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.Receiver.IsReceiverCalledOrDeeper(SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Know if the receiver will be called specific running level nor one of next level
+            </summary>
+            <param name="runningLevel">Running level</param>
+            <returns>True if the receiver will be called, False if not</returns>
+        </member>
+        <member name="T:SharePointRunner.SDK.BaseRunningLevel">
+            <summary>
+            Enumeration of different running levels
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.Tenant">
+            <summary>
+            Tenant level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.TermStore">
+            <summary>
+            Term store level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.TermGroup">
+            <summary>
+            Term group level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.TermSet">
+            <summary>
+            Term set level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.Term">
+            <summary>
+            Term
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.SiteCollection">
+            <summary>
+            Site collection level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.Group">
+            <summary>
+            Group level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.Site">
+            <summary>
+            Site level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.List">
+            <summary>
+            List level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.View">
+            <summary>
+            View Level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.Folder">
+            <summary>
+            Folder Level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.ListItem">
+            <summary>
+            List item level
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.BaseRunningLevel.File">
+            <summary>
+            File level
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.SDK.RunningLevel">
+            <summary>
+            Wrapper of enumeration of running levels, adding properties
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SDK.RunningLevel.Values">
+            <summary>
+            Dictionary of RunningLevel by RunningLevelEnum
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.BaseRunningLevel">
+            <summary>
+            Enumeration value of running level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Parent">
+            <summary>
+            Enumeration value of running level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Children">
+            <summary>
+            List of next running levels to this current level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Tenant">
+            <summary>
+            Tenant level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.TermStore">
+            <summary>
+            Term store level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.TermGroup">
+            <summary>
+            Term group level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.TermSet">
+            <summary>
+            Term set level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Term">
+            <summary>
+            Term
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.SiteCollection">
+            <summary>
+            Site collection level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Group">
+            <summary>
+            Group level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Site">
+            <summary>
+            Site level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.List">
+            <summary>
+            List level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.View">
+            <summary>
+            View level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.Folder">
+            <summary>
+            Folder level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.ListItem">
+            <summary>
+            List item level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SDK.RunningLevel.File">
+            <summary>
+            File Level
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.HasParent(SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Know if the current running level has another one as parent level
+            </summary>
+            <param name="otherRunningLevel">Another running level</param>
+            <returns>True if the other running level is a parent level of the current one, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.HasChild(SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Know if the current running level has another one to child level
+            </summary>
+            <param name="otherRunningLevel">Another running level</param>
+            <returns>True if the other running is a child level of the current one, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.ToString">
+            <summary>
+            Override of ToString() method to display the ToString() of the enum value
+            </summary>
+            <returns>The string value</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.GetHashCode">
+            <summary>
+            Override of GetHeshCode() method
+            </summary>
+            <returns>The hash value</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.Equals(System.Object)">
+            <summary>
+            Override of Equals() method to compare enum value of both objects
+            </summary>
+            <param name="obj">Object to compare</param>
+            <returns>True if the objects have the same running level enum value, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.op_Equality(SharePointRunner.SDK.RunningLevel,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Override of == operator
+            </summary>
+            <param name="r1">First object to compare</param>
+            <param name="r2">Second object to compare</param>
+            <returns>True if both running levels are equal, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.op_Inequality(SharePointRunner.SDK.RunningLevel,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Override of != operator
+            </summary>
+            <param name="r1">First object to compare</param>
+            <param name="r2">Second object to compare</param>
+            <returns>True if both running levels are not equal, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.op_LessThan(SharePointRunner.SDK.RunningLevel,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Override of &lt; operator
+            </summary>
+            <param name="r1">First object to compare</param>
+            <param name="r2">Second object to compare</param>
+            <returns>True if the first running level is at a lower level to the second, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.op_GreaterThan(SharePointRunner.SDK.RunningLevel,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Override of &gt; operator
+            </summary>
+            <param name="r1">First object to compare</param>
+            <param name="r2">Second object to compare</param>
+            <returns>True if the first running level is at a greater level to the second, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.op_LessThanOrEqual(SharePointRunner.SDK.RunningLevel,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Override of &lt;= operator
+            </summary>
+            <param name="r1">First object to compare</param>
+            <param name="r2">Second object to compare</param>
+            <returns>True if the first running level is at a lower level or equal to the second, False if not</returns>
+        </member>
+        <member name="M:SharePointRunner.SDK.RunningLevel.op_GreaterThanOrEqual(SharePointRunner.SDK.RunningLevel,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Override of &gt;= operator
+            </summary>
+            <param name="r1">First object to compare</param>
+            <param name="r2">Second object to compare</param>
+            <returns>True if the first running level is at a greater level or equal to the second, False if not</returns>
+        </member>
+    </members>
+</doc>

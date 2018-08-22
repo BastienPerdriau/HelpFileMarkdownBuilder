@@ -1,0 +1,462 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SharePointRunner</name>
+    </assembly>
+    <members>
+        <member name="M:SharePointRunner.GroupRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Group)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="group">Group</param>
+        </member>
+        <member name="M:SharePointRunner.GroupRunner.Process">
+            <summary>
+            Action for this SharePoint group
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.ConfigFileInfo">
+            <summary>
+            Information from the configuration file
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.Login">
+            <summary>
+            Login of the user
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.Password">
+            <summary>
+            Password of the user
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.SecuredPassword">
+            <summary>
+            Scured password of the user
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.PathToDLL">
+            <summary>
+            Path between the execution path of the application and the folder where are the assemblies
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.Receivers">
+            <summary>
+            List of the receivers assemblies
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.Urls">
+            <summary>
+            List of URLs
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.StartRunningLevelString">
+            <summary>
+            Starting running level string value
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ConfigFileInfo.StartRunningLevel">
+            <summary>
+            Starting running level
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.FileRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.File)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="file">File</param>
+        </member>
+        <member name="M:SharePointRunner.FileRunner.Process">
+            <summary>
+            Action for this SharePoint file
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.FolderRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Folder)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="folder">Folder</param>
+        </member>
+        <member name="M:SharePointRunner.FolderRunner.Process">
+            <summary>
+            Action for this SharePoint folder
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.ListItemRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.ListItem)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="listItem">List item</param>
+        </member>
+        <member name="M:SharePointRunner.ListItemRunner.Process">
+            <summary>
+            Action for this SharePoint list item
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.ListRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.List)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="list">List</param>
+        </member>
+        <member name="M:SharePointRunner.ListRunner.Process">
+            <summary>
+            Action for this SharePoint list
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.ClassParameter">
+            <summary>
+            Parameter passed to a class
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ClassParameter.Name">
+            <summary>
+            Name of the parameter
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ClassParameter.Value">
+            <summary>
+            Value of the parameter
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.ReceiverAssembly">
+            <summary>
+            Representation of a receiver assembly
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.AssemblyName">
+            <summary>
+            Name of the assembly
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.ClassName">
+            <summary>
+            Name of the class
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.IncludeSubSitesString">
+            <summary>
+            String value of the IncludeSubSites property
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.IncludeSubSites">
+            <summary>
+            True if the receiver process include sub sites, False if not
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.IncludeHiddenListsString">
+            <summary>
+            String value of the IncludeHiddenLists property
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.IncludeHiddenLists">
+            <summary>
+            True if the receiver process include hidden lists, False if not
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.ReceiverAssembly.Parameters">
+            <summary>
+            List of the parameters passed to the receiver
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.Runner">
+            <summary>
+            Base class of a runner
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.Runner.Manager">
+            <summary>
+            Running Maanger
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.Runner.RunningLevel">
+            <summary>
+            Running level
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.Runner.ActiveReceivers">
+            <summary>
+            List of active receivers for this runner
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.Runner.#ctor(SharePointRunner.RunningManager,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="runningLevel">Running level</param>
+        </member>
+        <member name="M:SharePointRunner.Runner.Process">
+            <summary>
+            Action for this object
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.Runner`1">
+            <summary>
+            Base class of a runner of SharePoint object
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="P:SharePointRunner.Runner`1.Element">
+            <summary>
+            SharePoint Element
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.Runner`1.Context">
+            <summary>
+            SharePoint Context
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.Runner`1.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,`0,SharePointRunner.SDK.RunningLevel)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint Context</param>
+            <param name="element">Current SharePoint object</param>
+            <param name="runningLevel">Running level</param>
+        </member>
+        <member name="T:SharePointRunner.RunningManager">
+            <summary>
+            Controller class to run SharePoint sites
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.RunningManager.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.RunningManager.Credentials">
+            <summary>
+            SharePoint Credentials
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.RunningManager.Receivers">
+            <summary>
+            List of receivers
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.RunningManager.Urls">
+            <summary>
+            List of URLs
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.RunningManager.StartingRunningLevel">
+            <summary>
+            Starting running level
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.RunningManager.Run">
+            <summary>
+            Start a run
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.RunningManager.GetTenantRunner(System.String)">
+            <summary>
+            Get runner for a tenant
+            </summary>
+            <param name="tenantUrl">Tenant URL</param>
+        </member>
+        <member name="M:SharePointRunner.RunningManager.GetSiteCollectionRunners(System.Collections.Generic.List{System.String})">
+            <summary>
+            Get runners of site collections
+            </summary>
+            <param name="siteCollectionUrls">Site collections URLs</param>
+        </member>
+        <member name="M:SharePointRunner.RunningManager.GetSiteRunners(System.Collections.Generic.List{System.String})">
+            <summary>
+            Get runners of sites
+            </summary>
+            <param name="siteUrls">Sites SURLs</param>
+        </member>
+        <member name="M:SharePointRunner.RunningManager.GetListRunners(System.Collections.Generic.List{System.String})">
+            <summary>
+            Get runners of lists
+            </summary>
+            <param name="listUrls">Lists URLs</param>
+        </member>
+        <member name="M:SharePointRunner.RunningManager.OpenClientContext(System.String)">
+            <summary>
+            Open a SharePoint context
+            </summary>
+            <param name="url">SharePoint site URL</param>
+            <returns>SharePoint context</returns>
+        </member>
+        <member name="T:SharePointRunner.SharePointRunner">
+            <summary>
+            Launcher class
+            </summary>
+        </member>
+        <member name="F:SharePointRunner.SharePointRunner.Logger">
+            <summary>
+            Logger
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SharePointRunner.GetConfigFileInfoFromXml(System.String)">
+            <summary>
+            Get the configuration info parsing the XML config file
+            </summary>
+            <param name="configFilePath">Path of the XML configuration file</param>
+            <returns>Configuration informations from the file</returns>
+        </member>
+        <member name="M:SharePointRunner.SharePointRunner.GetConfigFileInfoFromJson(System.String)">
+            <summary>
+            Get the configuration info parsing the JSON config file
+            </summary>
+            <param name="configFilePath">Path of the JSON configuration file</param>
+            <returns>Configuration informations from the file</returns>
+        </member>
+        <member name="M:SharePointRunner.SharePointRunner.GetRunningManagerFromConfigFile(SharePointRunner.ConfigFileInfo,Microsoft.SharePoint.Client.SharePointOnlineCredentials)">
+            <summary>
+            Get the running manager from the configuration file info
+            </summary>
+            <param name="configFileInfo">Configuration information from the file</param>
+            <param name="credentials">SharePoint Online credentials</param>
+            <returns>Running manager</returns>
+        </member>
+        <member name="M:SharePointRunner.SharePointRunner.Run(SharePointRunner.ConfigFileInfo,Microsoft.SharePoint.Client.SharePointOnlineCredentials)">
+            <summary>
+            Start a run using the information info
+            </summary>
+            <param name="configInfo">configuration info</param>
+            <param name="credentials">SharePoint Online credentials</param>
+        </member>
+        <member name="M:SharePointRunner.SharePointRunner.Run(System.String,Microsoft.SharePoint.Client.SharePointOnlineCredentials)">
+            <summary>
+            Start a run using the information from the configuration file
+            </summary>
+            <param name="configFilePath">Path of the configuration file</param>
+            <param name="credentials">SharePoint Online credentials</param>
+        </member>
+        <member name="M:SharePointRunner.SiteCollectionRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Site)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="site">Site collection</param>
+        </member>
+        <member name="M:SharePointRunner.SiteCollectionRunner.Process">
+            <summary>
+            Action for this SharePoint site collection
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SiteRunner.ActiveReceivers">
+            <summary>
+            List of active receivers for this runner
+            </summary>
+        </member>
+        <member name="P:SharePointRunner.SiteRunner.IsSubSite">
+            <summary>
+            True if the site is a sub site, False if not
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.SiteRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Web,System.Boolean)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="web">Site</param>
+            <param name="isSubSite">True if the site is a sub site, False if not</param>
+        </member>
+        <member name="M:SharePointRunner.SiteRunner.Process">
+            <summary>
+            Action for this SharePoint site
+            </summary>
+        </member>
+        <member name="T:SharePointRunner.TenantRunner">
+            <summary>
+            Runner of SharePoint Tenant
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.TenantRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.Online.SharePoint.TenantAdministration.Tenant)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="tenant">Tenant</param>
+        </member>
+        <member name="M:SharePointRunner.TenantRunner.Process">
+            <summary>
+            Action for this SharePoint tenant
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.TermGroupRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Taxonomy.TermGroup)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="termGroup">Term group</param>
+        </member>
+        <member name="M:SharePointRunner.TermGroupRunner.Process">
+            <summary>
+            Action for this SharePoint term group
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.TermRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Taxonomy.Term)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="term">Term</param>
+        </member>
+        <member name="M:SharePointRunner.TermRunner.Process">
+            <summary>
+            Action for this SharePoint term
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.TermSetRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Taxonomy.TermSet)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="termSet">Term set</param>
+        </member>
+        <member name="M:SharePointRunner.TermSetRunner.Process">
+            <summary>
+            Action for this SharePoint term set
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.TermStoreRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.Taxonomy.TermStore)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="termStore">Term store</param>
+        </member>
+        <member name="M:SharePointRunner.TermStoreRunner.Process">
+            <summary>
+            Action for this SharePoint term store
+            </summary>
+        </member>
+        <member name="M:SharePointRunner.ViewRunner.#ctor(SharePointRunner.RunningManager,Microsoft.SharePoint.Client.ClientContext,Microsoft.SharePoint.Client.View)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="runningManager">Running manager</param>
+            <param name="context">SharePoint context</param>
+            <param name="view">View</param>
+        </member>
+        <member name="M:SharePointRunner.ViewRunner.Process">
+            <summary>
+            Action for this SharePoint view
+            </summary>
+        </member>
+    </members>
+</doc>

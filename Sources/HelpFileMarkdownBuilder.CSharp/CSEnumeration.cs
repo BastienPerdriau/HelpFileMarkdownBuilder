@@ -1,7 +1,20 @@
-﻿namespace HelpFileMarkdownBuilder.CSharp
+﻿using HelpFileMarkdownBuilder.Base;
+
+namespace HelpFileMarkdownBuilder.CSharp
 {
+    /// <summary>
+    /// C# Enumeration
+    /// </summary>
     public class CSEnumeration : CSType
     {
-
+        /// <summary>
+        /// Return the help file to build
+        /// </summary>
+        /// <returns>Help file to build</returns>
+        public override HelpFile ToMarkdown()
+        {
+            // TODO CSEnumeration ToMarkdown
+            return null;
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace HelpFileMarkdownBuilder
             Builder builder = language.Builder;
             builder.SourceFiles = sourceFiles;
 
-            List<string> files = builder.BuildHelpFiles();
+            List<HelpFile> files = builder.BuildHelpFiles();
         }
     }
 }
