@@ -49,7 +49,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="XmlAssembly.cs" />
     <Compile Include="XmlAssemblyName.cs" />
-    <Compile Include="XmlCSDeserializer.cs" />
+    <Compile Include="XmlDocDeserializer.cs" />
     <Compile Include="XmlDoc.cs" />
     <Compile Include="XmlMember.cs" />
     <Compile Include="XmlMemberSummary.cs" />

@@ -7,7 +7,7 @@ namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
     /// <summary>
     /// C# XML documentation file deserializer
     /// </summary>
-    public static class CSXmlDeserializer
+    public static class XmlDocDeserializer
     {
         /// <summary>
         /// Deserialize a C# XML documentation file

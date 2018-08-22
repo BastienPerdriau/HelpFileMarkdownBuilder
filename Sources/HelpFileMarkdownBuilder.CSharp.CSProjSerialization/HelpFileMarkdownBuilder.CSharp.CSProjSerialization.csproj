@@ -20,6 +20,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\HelpFileMarkdownBuilder.CSharp.CSProjSerialization.xml</DocumentationFile>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -28,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\HelpFileMarkdownBuilder.CSharp.CSProjSerialization.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
@@ -43,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSProjDeserializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XmlDocumentationFile.cs" />
+    <Compile Include="XmlOutputPath.cs" />
+    <Compile Include="XmlProject.cs" />
+    <Compile Include="XmlPropertyGroup.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

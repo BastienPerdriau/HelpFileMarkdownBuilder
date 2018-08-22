@@ -1,4 +1,5 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using HelpFileMarkdownBuilder.CSharp.CSProjSerialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,7 +33,13 @@ namespace HelpFileMarkdownBuilder.CSharp
 
             List<string> projectFiles = GetProjectFiles();
 
+            List<XmlProject> deserializedProjectFiles = projectFiles.Select(f => CSProjDeserializer.Deserialize(f)).ToList();
 
+            // TODO for each deserialized project file, find generated dll (if not => error ?) and generated documentation file (if not => warning)
+
+            List<GeneratedFiles> generatedFiles = new List<GeneratedFiles>(); // TODO
+
+            // TODO From all those files, create CSAssembly and CSNamespace class, then CSType (CSClass, CSInterface, CSEnumeration), then CSProperty and CSMethod
 
             List<HelpFile> results = new List<HelpFile>();
 
