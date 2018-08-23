@@ -45,7 +45,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="InternalAbstractClass.cs" />
+    <Compile Include="InternalClass.cs" />
+    <Compile Include="InternalEnumeration.cs" />
+    <Compile Include="InternalImplementedInterface.cs" />
+    <Compile Include="InternalInheritedClass.cs" />
+    <Compile Include="InternalInheritedClassImplementedInterface.cs" />
+    <Compile Include="InternalInterface.cs" />
+    <Compile Include="InternalStaticClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicAbstractClass.cs" />
+    <Compile Include="PublicClass.cs" />
+    <Compile Include="PublicEnumeration.cs" />
+    <Compile Include="PublicImplementedInterface.cs" />
+    <Compile Include="PublicInheritedClass.cs" />
+    <Compile Include="PublicInheritedClassImplementedInterface.cs" />
+    <Compile Include="PublicInterface.cs" />
+    <Compile Include="PublicStaticClass.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
