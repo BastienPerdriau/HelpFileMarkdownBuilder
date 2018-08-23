@@ -3,14 +3,14 @@
 namespace HelpFileMarkdownBuilder.CSharp
 {
     /// <summary>
-    /// C# Property
+    /// C# Enumeration value
     /// </summary>
-    public class CSProperty : CSMember
+    public class CSEnumerationValue : CSMember
     {
         /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
-        public override char[] XmlPrefixName => new char[] { 'P', 'F' };
+        public override char[] XmlPrefixName => new char[] { 'F' };
 
         /// <summary>
         /// Return the help file to build
@@ -18,7 +18,7 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// <returns>Help file to build</returns>
         public override HelpFile ToMarkdown()
         {
-            // TODO CSProperty ToMarkdown
+            // TODO CSEnumerationValue ToMarkdown
             return null;
         }
     }

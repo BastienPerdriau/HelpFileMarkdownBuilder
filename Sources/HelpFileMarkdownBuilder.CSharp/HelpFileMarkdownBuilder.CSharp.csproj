@@ -49,6 +49,7 @@
     <Compile Include="CSAssembly.cs" />
     <Compile Include="CSClass.cs" />
     <Compile Include="CSEnumeration.cs" />
+    <Compile Include="CSEnumerationValue.cs" />
     <Compile Include="CSharpBuilder.cs" />
     <Compile Include="CSInterface.cs" />
     <Compile Include="CSMember.cs" />

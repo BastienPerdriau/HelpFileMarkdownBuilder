@@ -8,6 +8,11 @@ namespace HelpFileMarkdownBuilder.CSharp
     public class CSNamespace : CSMember
     {
         /// <summary>
+        /// Prefix of the name in Xml documentation file
+        /// </summary>
+        public override char[] XmlPrefixName => new char[] { };
+
+        /// <summary>
         /// Return the help file to build
         /// </summary>
         /// <returns>Help file to build</returns>
