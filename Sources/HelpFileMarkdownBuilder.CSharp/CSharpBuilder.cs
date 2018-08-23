@@ -35,11 +35,11 @@ namespace HelpFileMarkdownBuilder.CSharp
 
             List<XmlProject> deserializedProjectFiles = projectFiles.Select(f => CSProjDeserializer.Deserialize(f)).ToList();
 
-            // TODO for each deserialized project file, find generated dll (if not => error ?) and generated documentation file (if not => warning)
+            // TODO for each deserialized project files, find generated dlls (if not => error) and generated documentation files (if not => warning)
 
             List<GeneratedFiles> generatedFiles = new List<GeneratedFiles>(); // TODO
 
-            // TODO From all those files, create CSAssembly and CSNamespace class, then CSType (CSClass, CSInterface, CSEnumeration), then CSProperty and CSMethod
+            // TODO From dlls, create CSAssembly and CSNamespace class, then CSType (CSClass, CSInterface, CSEnumeration), then CSProperty and CSMethod, and then consolidate with documentation
 
             List<HelpFile> results = new List<HelpFile>();
 

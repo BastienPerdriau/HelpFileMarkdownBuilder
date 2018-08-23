@@ -15,17 +15,7 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// <summary>
         /// Only assembly
         /// </summary>
-        OnlyAssembly,
-
-        /// <summary>
-        /// Only documentation
-        /// </summary>
-        OnlyDocumentation,
-
-        /// <summary>
-        /// None
-        /// </summary>
-        None
+        OnlyAssembly
     }
 
     /// <summary>
@@ -62,14 +52,11 @@ namespace HelpFileMarkdownBuilder.CSharp
             else if (assemblyFile != null)
             {
                 State = GeneratedFilesState.OnlyAssembly;
-            }
-            else if (assemblyFile != null)
-            {
-                State = GeneratedFilesState.OnlyDocumentation;
+                // TODO Logs warn
             }
             else
             {
-                State = GeneratedFilesState.None;
+                // TODO Logs warn
             }
         }
     }

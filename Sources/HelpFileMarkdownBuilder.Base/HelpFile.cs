@@ -6,6 +6,11 @@
     public class HelpFile
     {
         /// <summary>
+        /// File path
+        /// </summary>
+        public string Path { get; set; } = string.Empty;
+
+        /// <summary>
         /// File name
         /// </summary>
         public string Name { get; set; } = string.Empty;

@@ -11,5 +11,10 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public abstract char[] XmlPrefixName { get; }
+
+        /// <summary>
+        /// Summary
+        /// </summary>
+        public string Summary { get; set; } = string.Empty;
     }
 }
