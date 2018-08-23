@@ -12,6 +12,8 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'F' };
 
+        // TODO Enumeration
+
         /// <summary>
         /// Return the help file to build
         /// </summary>

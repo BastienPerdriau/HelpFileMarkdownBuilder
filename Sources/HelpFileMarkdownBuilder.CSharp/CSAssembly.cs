@@ -5,13 +5,8 @@ namespace HelpFileMarkdownBuilder.CSharp
     /// <summary>
     /// C# Assembly
     /// </summary>
-    public class CSAssembly : CSMember
+    public class CSAssembly : CSTypeSubset
     {
-        /// <summary>
-        /// Prefix of the name in Xml documentation file
-        /// </summary>
-        public override char[] XmlPrefixName => new char[] { };
-
         /// <summary>
         /// Return the help file to build
         /// </summary>

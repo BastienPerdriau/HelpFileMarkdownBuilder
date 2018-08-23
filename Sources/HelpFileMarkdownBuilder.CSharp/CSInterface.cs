@@ -5,8 +5,15 @@ namespace HelpFileMarkdownBuilder.CSharp
     /// <summary>
     /// C# Interface
     /// </summary>
-    public class CSInterface : CSType
+    public class CSInterface : CSStrongType
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="csAssembly">Assembly</param>
+        /// <param name="csNamespace">Namespace</param>
+        public CSInterface(CSAssembly csAssembly, CSNamespace csNamespace) : base(csAssembly, csNamespace) { }
+
         /// <summary>
         /// Return the help file to build
         /// </summary>

@@ -12,6 +12,8 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'M' };
 
+        // TODO StrongType
+
         /// <summary>
         /// Return the help file to build
         /// </summary>

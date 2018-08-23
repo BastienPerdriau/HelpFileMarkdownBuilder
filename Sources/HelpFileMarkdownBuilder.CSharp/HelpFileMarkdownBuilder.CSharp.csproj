@@ -52,11 +52,13 @@
     <Compile Include="CSEnumerationValue.cs" />
     <Compile Include="CSharpBuilder.cs" />
     <Compile Include="CSInterface.cs" />
-    <Compile Include="CSMember.cs" />
+    <Compile Include="Abstracts\CSMember.cs" />
     <Compile Include="CSMethod.cs" />
     <Compile Include="CSNamespace.cs" />
     <Compile Include="CSProperty.cs" />
-    <Compile Include="CSType.cs" />
+    <Compile Include="Abstracts\CSStrongType.cs" />
+    <Compile Include="Abstracts\CSType.cs" />
+    <Compile Include="Abstracts\CSTypeSubset.cs" />
     <Compile Include="GeneratedFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
