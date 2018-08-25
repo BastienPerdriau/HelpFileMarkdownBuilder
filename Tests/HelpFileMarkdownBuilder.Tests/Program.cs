@@ -16,8 +16,9 @@ namespace HelpFileMarkdownBuilder.Tests
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.CSharp\HelpFileMarkdownBuilder.CSharp.SlnSerialization.csproj",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.CSharp\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.csproj",
             };
-
-            HelpFileBuilder.BuildHelpFiles(examples, Language.CSharp);
+            var l = Language.CSharp;
+            l.BuildConfiguration = "aaaaaa";
+            HelpFileBuilder.BuildHelpFiles(examples, l);
         }
     }
 }

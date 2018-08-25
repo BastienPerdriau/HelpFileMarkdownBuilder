@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CSharpLanguage.cs" />
     <Compile Include="Enumeration.cs" />
     <Compile Include="HelpFileBuilder.cs" />
     <Compile Include="Language.cs" />

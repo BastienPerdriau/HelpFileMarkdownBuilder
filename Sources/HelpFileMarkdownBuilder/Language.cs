@@ -8,41 +8,33 @@ namespace HelpFileMarkdownBuilder
     /// <summary>
     /// Languages to build help files
     /// </summary>
-    public class Language : Enumeration
+    public abstract class Language : Enumeration
     {
         /// <summary>
         /// C#
         /// </summary>
-        public static Language CSharp => new Language(0, "C#", "C-Sharp", new CSharpBuilder());
+        public static CSharpLanguage CSharp => new CSharpLanguage(0);
 
         /// <summary>
         /// Short name
         /// </summary>
-        public string ShortName { get; internal set; }
+        public abstract string ShortName { get; }
 
         /// <summary>
         /// Full name
         /// </summary>
-        public string FullName { get; internal set; }
+        public abstract string FullName { get; }
 
         /// <summary>
         /// Builder
         /// </summary>
-        public Builder Builder { get; internal set; }
+        internal abstract Builder Builder { get; }
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="key">Key</param>
-        /// <param name="shortName">Short name</param>
-        /// <param name="fullName">Full name</param>
-        /// <param name="builder">Builder</param>
-        private Language(int key, string shortName, string fullName, Builder builder) : base(key)
-        {
-            ShortName = shortName;
-            FullName = fullName;
-            Builder = builder;
-        }
+        protected Language(int key) : base(key) { }
 
         /// <summary>
         /// Gets a language by it short name

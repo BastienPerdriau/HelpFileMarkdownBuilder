@@ -16,6 +16,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
     public class CSharpBuilder : Base.Builder
     {
         /// <summary>
+        /// Assemblies build configuration
+        /// </summary>
+        public string BuildConfiguration { get; set; }// = "Release";
+
+        /// <summary>
         /// Build help files from XML documentation files and assemblies
         /// </summary>
         /// <returns>Markdown documentation generated from build</returns>
