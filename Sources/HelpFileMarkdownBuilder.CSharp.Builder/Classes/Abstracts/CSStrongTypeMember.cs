@@ -1,4 +1,4 @@
-﻿namespace HelpFileMarkdownBuilder.CSharp
+﻿namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
     /// C# Strong type member (property or method)

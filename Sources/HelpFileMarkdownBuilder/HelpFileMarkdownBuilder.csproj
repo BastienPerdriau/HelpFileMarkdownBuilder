@@ -56,13 +56,9 @@
       <Project>{6397732c-b4cf-49d7-842f-8e80b52cdeb2}</Project>
       <Name>HelpFileMarkdownBuilder.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.csproj">
-      <Project>{729edf9c-310c-4f4e-b284-8c3f1009a79a}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp.XmlDocSerialization</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp\HelpFileMarkdownBuilder.CSharp.csproj">
+    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.Builder\HelpFileMarkdownBuilder.CSharp.Builder.csproj">
       <Project>{13e230ba-4e30-44e7-acc6-b88886d4fbd0}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp</Name>
+      <Name>HelpFileMarkdownBuilder.CSharp.Builder</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

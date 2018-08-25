@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace HelpFileMarkdownBuilder.CSharp
+namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
     /// C# Type subset

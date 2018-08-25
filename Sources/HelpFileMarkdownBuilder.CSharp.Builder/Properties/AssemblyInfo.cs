@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("HelpFileMarkdownBuilder.CSharp")]
+[assembly: AssemblyTitle("HelpFileMarkdownBuilder.CSharp.Builder")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bastien Perdriau")]
-[assembly: AssemblyProduct("HelpFileMarkdownBuilder.CSharp")]
+[assembly: AssemblyProduct("HelpFileMarkdownBuilder.CSharp.Builder")]
 [assembly: AssemblyCopyright("Copyright © Bastien Perdriau 2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

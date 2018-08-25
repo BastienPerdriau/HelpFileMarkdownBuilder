@@ -1,18 +1,24 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using System.Collections.Generic;
 
-namespace HelpFileMarkdownBuilder.CSharp
+namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
-    /// C# Interface
+    /// C# Enumeration
     /// </summary>
-    public class CSInterface : CSStrongType
+    public class CSEnumeration : CSType
     {
+        /// <summary>
+        /// List of values
+        /// </summary>
+        public List<CSEnumerationValue> Values { get; set; } = new List<CSEnumerationValue>();
+
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="csAssembly">Assembly</param>
         /// <param name="csNamespace">Namespace</param>
-        public CSInterface(CSAssembly csAssembly, CSNamespace csNamespace) : base(csAssembly, csNamespace) { }
+        public CSEnumeration(CSAssembly csAssembly, CSNamespace csNamespace) : base(csAssembly, csNamespace) { }
 
         /// <summary>
         /// Return the help file to build
@@ -20,7 +26,7 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// <returns>Help file to build</returns>
         public override HelpFile ToMarkdown()
         {
-            // TODO CSInterface ToMarkdown
+            // TODO CSEnumeration ToMarkdown
             return null;
         }
     }

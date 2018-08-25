@@ -1,5 +1,5 @@
 ﻿using HelpFileMarkdownBuilder.Base;
-using HelpFileMarkdownBuilder.CSharp;
+using HelpFileMarkdownBuilder.CSharp.Builder;
 using System;
 using System.Linq;
 

@@ -1,6 +1,6 @@
 ﻿using HelpFileMarkdownBuilder.Base;
 
-namespace HelpFileMarkdownBuilder.CSharp
+namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
     /// C# Enumeration value

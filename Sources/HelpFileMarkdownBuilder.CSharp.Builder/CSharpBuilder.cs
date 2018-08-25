@@ -8,12 +8,12 @@ using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
 
-namespace HelpFileMarkdownBuilder.CSharp
+namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
     /// Builder class of CSharp help file documentation
     /// </summary>
-    public class CSharpBuilder : Builder
+    public class CSharpBuilder : Base.Builder
     {
         /// <summary>
         /// Build help files from XML documentation files and assemblies

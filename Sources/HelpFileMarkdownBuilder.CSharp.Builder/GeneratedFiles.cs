@@ -1,6 +1,6 @@
 ﻿using System.IO;
 
-namespace HelpFileMarkdownBuilder.CSharp
+namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
     /// Enumeration of generated files states

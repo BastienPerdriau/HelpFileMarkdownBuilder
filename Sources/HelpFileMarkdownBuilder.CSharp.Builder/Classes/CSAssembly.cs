@@ -1,24 +1,19 @@
 ﻿using HelpFileMarkdownBuilder.Base;
 
-namespace HelpFileMarkdownBuilder.CSharp
+namespace HelpFileMarkdownBuilder.CSharp.Builder
 {
     /// <summary>
-    /// C# Namespace
+    /// C# Assembly
     /// </summary>
-    public class CSNamespace : CSTypeSubset
+    public class CSAssembly : CSTypeSubset
     {
-        /// <summary>
-        /// Constructor
-        /// </summary>
-        public CSNamespace() { }
-
         /// <summary>
         /// Return the help file to build
         /// </summary>
         /// <returns>Help file to build</returns>
         public override HelpFile ToMarkdown()
         {
-            // TODO CSNamespace ToMarkdown
+            // TODO CSAssembly ToMarkdown
             return null;
         }
     }

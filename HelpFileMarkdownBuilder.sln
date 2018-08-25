@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Base", "Sources\HelpFileMarkdownBuilder.Base\HelpFileMarkdownBuilder.Base.csproj", "{6397732C-B4CF-49D7-842F-8E80B52CDEB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp", "Sources\HelpFileMarkdownBuilder.CSharp\HelpFileMarkdownBuilder.CSharp.csproj", "{13E230BA-4E30-44E7-ACC6-B88886D4FBD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.Builder", "Sources\HelpFileMarkdownBuilder.CSharp.Builder\HelpFileMarkdownBuilder.CSharp.Builder.csproj", "{13E230BA-4E30-44E7-ACC6-B88886D4FBD0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.XmlDocSerialization", "Sources\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.csproj", "{729EDF9C-310C-4F4E-B284-8C3F1009A79A}"
 EndProject
