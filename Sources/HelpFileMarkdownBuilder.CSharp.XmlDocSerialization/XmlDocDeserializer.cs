@@ -21,7 +21,7 @@ namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(XmlDoc));
-                using (var reader = new StreamReader(documentationFile))
+                using (StreamReader reader = new StreamReader(documentationFile))
                 {
                     docFile = (XmlDoc)serializer.Deserialize(reader);
                 }

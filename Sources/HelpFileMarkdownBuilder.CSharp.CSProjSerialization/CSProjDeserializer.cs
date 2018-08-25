@@ -16,14 +16,14 @@ namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
         /// <returns>Csproj file deserialized</returns>
         public static XmlProject Deserialize(string projectFile)
         {
-            XmlProject docFile = default;
+            XmlProject projFile = default;
 
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(XmlProject));
-                using (var reader = new StreamReader(projectFile))
+                using (StreamReader reader = new StreamReader(projectFile))
                 {
-                    docFile = (XmlProject)serializer.Deserialize(reader);
+                    projFile = (XmlProject)serializer.Deserialize(reader);
                 }
             }
             catch (Exception e)
@@ -31,7 +31,7 @@ namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
                 // TODO Add logs
             }
 
-            return docFile;
+            return projFile;
         }
     }
 }
