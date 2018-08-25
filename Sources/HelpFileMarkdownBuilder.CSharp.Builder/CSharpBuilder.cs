@@ -1,6 +1,6 @@
 ﻿using HelpFileMarkdownBuilder.Base;
-using HelpFileMarkdownBuilder.CSharp.CSProjSerialization;
-using HelpFileMarkdownBuilder.CSharp.SlnSerialization;
+using HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile;
+using HelpFileMarkdownBuilder.Serialization.SlnFile;
 using System;
 using System.Collections.Generic;
 using System.Linq;
