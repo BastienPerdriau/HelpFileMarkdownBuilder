@@ -5,14 +5,26 @@ namespace HelpFileMarkdownBuilder.CSharp
     /// <summary>
     /// C# Property
     /// </summary>
-    public class CSProperty : CSMember
+    public class CSProperty : CSStrongTypeMember
     {
         /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'P', 'F' };
 
-        // TODO StrongType
+        // TODO Public / Private / ...
+
+        // TODO Get, set, readonly
+
+        // TODO Static / not
+
+        // TODO Abstract / not
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="csStrongType">Strong Type</param>
+        public CSProperty(CSStrongType csStrongType) : base(csStrongType) { }
 
         /// <summary>
         /// Return the help file to build

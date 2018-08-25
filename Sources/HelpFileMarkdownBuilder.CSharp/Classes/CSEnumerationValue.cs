@@ -12,7 +12,19 @@ namespace HelpFileMarkdownBuilder.CSharp
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'F' };
 
-        // TODO Enumeration
+        /// <summary>
+        /// Enumeration
+        /// </summary>
+        public CSEnumeration Enumeration { get; }
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="csEnumeration">Enumeration</param>
+        public CSEnumerationValue(CSEnumeration csEnumeration)
+        {
+            Enumeration = csEnumeration;
+        }
 
         /// <summary>
         /// Return the help file to build

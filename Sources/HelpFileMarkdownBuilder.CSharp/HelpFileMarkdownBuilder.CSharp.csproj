@@ -46,19 +46,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSAssembly.cs" />
-    <Compile Include="CSClass.cs" />
-    <Compile Include="CSEnumeration.cs" />
-    <Compile Include="CSEnumerationValue.cs" />
+    <Compile Include="Classes\CSAssembly.cs" />
+    <Compile Include="Classes\CSClass.cs" />
+    <Compile Include="Classes\CSEnumeration.cs" />
+    <Compile Include="Classes\CSEnumerationValue.cs" />
     <Compile Include="CSharpBuilder.cs" />
-    <Compile Include="CSInterface.cs" />
-    <Compile Include="Abstracts\CSMember.cs" />
-    <Compile Include="CSMethod.cs" />
-    <Compile Include="CSNamespace.cs" />
-    <Compile Include="CSProperty.cs" />
-    <Compile Include="Abstracts\CSStrongType.cs" />
-    <Compile Include="Abstracts\CSType.cs" />
-    <Compile Include="Abstracts\CSTypeSubset.cs" />
+    <Compile Include="Classes\CSInterface.cs" />
+    <Compile Include="Classes\Abstracts\CSMember.cs" />
+    <Compile Include="Classes\CSMethod.cs" />
+    <Compile Include="Classes\CSNamespace.cs" />
+    <Compile Include="Classes\CSProperty.cs" />
+    <Compile Include="Classes\Abstracts\CSStrongType.cs" />
+    <Compile Include="Classes\Abstracts\CSType.cs" />
+    <Compile Include="Classes\Abstracts\CSTypeSubset.cs" />
+    <Compile Include="Classes\Abstracts\CSStrongTypeMember.cs" />
     <Compile Include="GeneratedFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -78,6 +79,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Enums\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

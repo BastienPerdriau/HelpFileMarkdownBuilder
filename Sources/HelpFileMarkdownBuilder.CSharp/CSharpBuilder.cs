@@ -59,10 +59,12 @@ namespace HelpFileMarkdownBuilder.CSharp
                 if (Regex.IsMatch(sourceFile, @"([a-zA-Z\u00C0-\u024F0-9\s_\\.\-\(\):])+(\.csproj)$", RegexOptions.IgnoreCase))
                 {
                     projectFiles.Add(sourceFile);
+                    // TODO Logs debug
                 }
                 else if (Regex.IsMatch(sourceFile, @"([a-zA-Z\u00C0-\u024F0-9\s_\\.\-\(\):])+(\.sln)$", RegexOptions.IgnoreCase))
                 {
                     // TODO Get all csproj files from sln file
+                    // TODO Logs debug
                 }
                 else
                 {

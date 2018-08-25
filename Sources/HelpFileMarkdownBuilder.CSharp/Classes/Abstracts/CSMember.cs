@@ -13,6 +13,11 @@ namespace HelpFileMarkdownBuilder.CSharp
         public abstract char[] XmlPrefixName { get; }
 
         /// <summary>
+        /// Name
+        /// </summary>
+        public string Name { get; set; } = string.Empty;
+
+        /// <summary>
         /// Summary
         /// </summary>
         public string Summary { get; set; } = string.Empty;

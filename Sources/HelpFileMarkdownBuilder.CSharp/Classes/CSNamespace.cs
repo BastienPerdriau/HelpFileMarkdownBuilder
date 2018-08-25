@@ -8,6 +8,11 @@ namespace HelpFileMarkdownBuilder.CSharp
     public class CSNamespace : CSTypeSubset
     {
         /// <summary>
+        /// Constructor
+        /// </summary>
+        public CSNamespace() { }
+
+        /// <summary>
         /// Return the help file to build
         /// </summary>
         /// <returns>Help file to build</returns>

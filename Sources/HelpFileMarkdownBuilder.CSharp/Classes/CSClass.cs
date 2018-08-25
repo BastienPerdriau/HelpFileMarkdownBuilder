@@ -7,6 +7,10 @@ namespace HelpFileMarkdownBuilder.CSharp
     /// </summary>
     public class CSClass : CSStrongType
     {
+        // TODO Static / Not
+
+        // TODO Abstract / Not
+
         // TODO Inherited classes
 
         // TODO Implemented interfaces
