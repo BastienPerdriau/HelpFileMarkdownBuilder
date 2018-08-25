@@ -8,7 +8,7 @@ namespace HelpFileMarkdownBuilder.Tests
         {
             List<string> examples = new List<string>()
             {
-                //@"..\..\..\..\..\SharePointRunner\SharePointRunner.sln",
+                @"..\..\..\..\..\SharePointRunner\SharePointRunner.sln",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder\HelpFileMarkdownBuilder.csproj",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.Base\HelpFileMarkdownBuilder.Base.csproj",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.CSharp\HelpFileMarkdownBuilder.CSharp.csproj",
