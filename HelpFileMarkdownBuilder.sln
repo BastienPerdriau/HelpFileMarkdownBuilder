@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Bas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.Builder", "Sources\HelpFileMarkdownBuilder.CSharp.Builder\HelpFileMarkdownBuilder.CSharp.Builder.csproj", "{13E230BA-4E30-44E7-ACC6-B88886D4FBD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.XmlDocSerialization", "Sources\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.csproj", "{729EDF9C-310C-4F4E-B284-8C3F1009A79A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile", "Sources\HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile\HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile.csproj", "{729EDF9C-310C-4F4E-B284-8C3F1009A79A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests.Assembly1", "Tests\HelpFileMarkdownBuilder.Tests.Assembly1\HelpFileMarkdownBuilder.Tests.Assembly1.csproj", "{B2BAA4F6-2B4F-4870-BE9D-F5118FBDCB33}"
 EndProject
@@ -23,9 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Tests", "Tests\HelpFileMarkdownBuilder.Tests\HelpFileMarkdownBuilder.Tests.csproj", "{F20DC6EC-745F-4D66-BC6D-22E52BF15985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.CSProjSerialization", "Sources\HelpFileMarkdownBuilder.CSharp.CSProjSerialization\HelpFileMarkdownBuilder.CSharp.CSProjSerialization.csproj", "{AB976461-733F-428B-B991-F9D7327FB646}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile", "Sources\HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile\HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile.csproj", "{AB976461-733F-428B-B991-F9D7327FB646}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.SlnSerialization", "Sources\HelpFileMarkdownBuilder.CSharp.SlnSerialization\HelpFileMarkdownBuilder.CSharp.SlnSerialization.csproj", "{1DF9BA94-699B-4DED-9BFA-5760E764BBCA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.Serialization.SlnFile", "Sources\HelpFileMarkdownBuilder.Serialization.SlnFile\HelpFileMarkdownBuilder.Serialization.SlnFile.csproj", "{1DF9BA94-699B-4DED-9BFA-5760E764BBCA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelpFileMarkdownBuilder.CSharp.Members", "Sources\HelpFileMarkdownBuilder.CSharp.Members\HelpFileMarkdownBuilder.CSharp.Members.csproj", "{5A37DBD5-9B3E-431A-9558-D613AEAE0D15}"
 EndProject
