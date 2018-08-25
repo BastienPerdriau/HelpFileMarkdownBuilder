@@ -1,30 +1,30 @@
 ﻿using HelpFileMarkdownBuilder.Base;
 
-namespace HelpFileMarkdownBuilder.CSharp.Builder
+namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
-    /// C# Property
+    /// C# Method
     /// </summary>
-    public class CSProperty : CSStrongTypeMember
+    public class CSMethod : CSStrongTypeMember
     {
         /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
-        public override char[] XmlPrefixName => new char[] { 'P', 'F' };
+        public override char[] XmlPrefixName => new char[] { 'M' };
+
+        // TODO Parameters
 
         // TODO Public / Private / ...
 
-        // TODO Get, set, readonly
+        // TODO Override / Not
 
-        // TODO Static / not
-
-        // TODO Abstract / not
+        // TODO Overrides in class
 
         /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="csStrongType">Strong Type</param>
-        public CSProperty(CSStrongType csStrongType) : base(csStrongType) { }
+        public CSMethod(CSStrongType csStrongType) : base(csStrongType) { }
 
         /// <summary>
         /// Return the help file to build
@@ -32,7 +32,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
         /// <returns>Help file to build</returns>
         public override HelpFile ToMarkdown()
         {
-            // TODO CSProperty ToMarkdown
+            // TODO CSMethod ToMarkdown
             return null;
         }
     }

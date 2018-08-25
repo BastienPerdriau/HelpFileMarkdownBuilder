@@ -1,4 +1,4 @@
-﻿namespace HelpFileMarkdownBuilder.CSharp.Builder
+﻿namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
     /// C# Type

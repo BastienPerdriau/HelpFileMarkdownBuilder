@@ -1,16 +1,18 @@
 ﻿using HelpFileMarkdownBuilder.Base;
 
-namespace HelpFileMarkdownBuilder.CSharp.Builder
+namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
-    /// C# Namespace
+    /// C# Interface
     /// </summary>
-    public class CSNamespace : CSTypeSubset
+    public class CSInterface : CSStrongType
     {
         /// <summary>
         /// Constructor
         /// </summary>
-        public CSNamespace() { }
+        /// <param name="csAssembly">Assembly</param>
+        /// <param name="csNamespace">Namespace</param>
+        public CSInterface(CSAssembly csAssembly, CSNamespace csNamespace) : base(csAssembly, csNamespace) { }
 
         /// <summary>
         /// Return the help file to build
@@ -18,7 +20,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
         /// <returns>Help file to build</returns>
         public override HelpFile ToMarkdown()
         {
-            // TODO CSNamespace ToMarkdown
+            // TODO CSInterface ToMarkdown
             return null;
         }
     }

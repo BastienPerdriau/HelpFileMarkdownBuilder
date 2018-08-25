@@ -1,0 +1,20 @@
+﻿using HelpFileMarkdownBuilder.Base;
+
+namespace HelpFileMarkdownBuilder.CSharp.Members
+{
+    /// <summary>
+    /// C# Assembly
+    /// </summary>
+    public class CSAssembly : CSTypeSubset
+    {
+        /// <summary>
+        /// Return the help file to build
+        /// </summary>
+        /// <returns>Help file to build</returns>
+        public override HelpFile ToMarkdown()
+        {
+            // TODO CSAssembly ToMarkdown
+            return null;
+        }
+    }
+}
