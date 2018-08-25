@@ -2,7 +2,7 @@
 using System.IO;
 using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile
 {
     /// <summary>
     /// C# XML documentation file deserializer

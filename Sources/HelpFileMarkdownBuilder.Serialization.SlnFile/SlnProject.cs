@@ -1,4 +1,4 @@
-﻿namespace HelpFileMarkdownBuilder.CSharp.SlnSerialization
+﻿namespace HelpFileMarkdownBuilder.Serialization.SlnFile
 {
     /// <summary>
     /// Project in solution file

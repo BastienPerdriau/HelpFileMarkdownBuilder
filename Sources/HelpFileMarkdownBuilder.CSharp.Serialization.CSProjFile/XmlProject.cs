@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
 {
     /// <summary>
     /// Root of a proj file

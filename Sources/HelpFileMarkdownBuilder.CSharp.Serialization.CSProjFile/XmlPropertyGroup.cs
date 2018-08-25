@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
 {
     /// <summary>
     /// PropertyGroup node
@@ -18,7 +18,7 @@ namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
         /// AssemblyName node
         /// </summary>
         [XmlElement("AssemblyName")]
-        public XmlOutputPath AssemblyName { get; set; } = null;
+        public XmlAssemblyName AssemblyName { get; set; } = null;
 
         /// <summary>
         /// OutputPath node

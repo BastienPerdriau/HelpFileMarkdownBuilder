@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
 {
     /// <summary>
     /// DocumentationFile node

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace HelpFileMarkdownBuilder.CSharp.SlnSerialization
+namespace HelpFileMarkdownBuilder.Serialization.SlnFile
 {
     /// <summary>
     /// C# Solution file deserializer

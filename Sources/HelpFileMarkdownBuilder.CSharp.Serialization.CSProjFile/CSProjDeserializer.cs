@@ -3,7 +3,7 @@ using System.IO;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
 {
     /// <summary>
     /// C# csproj file deserializer

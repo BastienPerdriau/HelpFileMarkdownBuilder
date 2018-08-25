@@ -1,6 +1,6 @@
 ﻿using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile
 {
     /// <summary>
     /// Documentation about an assembly

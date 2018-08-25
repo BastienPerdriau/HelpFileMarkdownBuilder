@@ -1,15 +1,15 @@
 ﻿using System.Xml.Serialization;
 
-namespace HelpFileMarkdownBuilder.CSharp.XmlDocSerialization
+namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
 {
     /// <summary>
-    /// Documentation about the summary of a member
+    /// AssemblyName node
     /// </summary>
-    [XmlType("summary")]
-    public class XmlMemberSummary
+    [XmlType("AssemblyName")]
+    public class XmlAssemblyName
     {
         /// <summary>
-        /// Value of the summary
+        /// Value of the AssemblyName node
         /// </summary>
         [XmlText]
         public string Value { get; set; } = string.Empty;

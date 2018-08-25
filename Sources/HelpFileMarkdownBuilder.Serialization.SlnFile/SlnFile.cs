@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace HelpFileMarkdownBuilder.CSharp.SlnSerialization
+namespace HelpFileMarkdownBuilder.Serialization.SlnFile
 {
     /// <summary>
     /// Root of the solution file
