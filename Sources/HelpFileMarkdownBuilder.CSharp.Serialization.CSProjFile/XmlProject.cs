@@ -10,6 +10,12 @@ namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
     public class XmlProject
     {
         /// <summary>
+        /// Project file path
+        /// </summary>
+        [XmlIgnore]
+        public string ProjectFilePath { get; set; }
+
+        /// <summary>
         /// PropertyGroup nodes
         /// </summary>
         [XmlElement("PropertyGroup")]

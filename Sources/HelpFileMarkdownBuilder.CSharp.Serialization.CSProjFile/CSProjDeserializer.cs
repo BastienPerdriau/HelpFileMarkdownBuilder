@@ -26,6 +26,8 @@ namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
                 {
                     projFile = (XmlProject)serializer.Deserialize(reader);
                 }
+
+                projFile.ProjectFilePath = projectFile;
             }
             catch (Exception e)
             {
