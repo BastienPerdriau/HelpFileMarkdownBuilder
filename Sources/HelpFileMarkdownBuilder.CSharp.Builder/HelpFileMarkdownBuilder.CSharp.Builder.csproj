@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildConfiguration.cs" />
     <Compile Include="CSharpBuilder.cs" />
     <Compile Include="GeneratedFiles.cs" />
+    <Compile Include="ProjectInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -55,21 +57,21 @@
       <Project>{6397732c-b4cf-49d7-842f-8e80b52cdeb2}</Project>
       <Name>HelpFileMarkdownBuilder.Base</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.CSProjSerialization\HelpFileMarkdownBuilder.CSharp.CSProjSerialization.csproj">
-      <Project>{ab976461-733f-428b-b991-f9d7327fb646}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp.CSProjSerialization</Name>
-    </ProjectReference>
     <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.Members\HelpFileMarkdownBuilder.CSharp.Members.csproj">
       <Project>{5a37dbd5-9b3e-431a-9558-d613aeae0d15}</Project>
       <Name>HelpFileMarkdownBuilder.CSharp.Members</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.SlnSerialization\HelpFileMarkdownBuilder.CSharp.SlnSerialization.csproj">
-      <Project>{1df9ba94-699b-4ded-9bfa-5760e764bbca}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp.SlnSerialization</Name>
+    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile\HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile.csproj">
+      <Project>{ab976461-733f-428b-b991-f9d7327fb646}</Project>
+      <Name>HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile</Name>
     </ProjectReference>
-    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization\HelpFileMarkdownBuilder.CSharp.XmlDocSerialization.csproj">
+    <ProjectReference Include="..\HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile\HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile.csproj">
       <Project>{729edf9c-310c-4f4e-b284-8c3f1009a79a}</Project>
-      <Name>HelpFileMarkdownBuilder.CSharp.XmlDocSerialization</Name>
+      <Name>HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HelpFileMarkdownBuilder.Serialization.SlnFile\HelpFileMarkdownBuilder.Serialization.SlnFile.csproj">
+      <Project>{1df9ba94-699b-4ded-9bfa-5760e764bbca}</Project>
+      <Name>HelpFileMarkdownBuilder.Serialization.SlnFile</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
