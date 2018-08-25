@@ -20,19 +20,22 @@ namespace HelpFileMarkdownBuilder.CSharp.SlnSerialization
 
             try
             {
-                Regex regex = new Regex(@"^Project\(\""{[0-9a-f]{8}[-]?(?:[0-9a-f]{4}[-]?){3}[0-9a-f]{12}}\""\) = \""(?'name'[0-9a-z.]*)\"", \""(?'path'[0-9a-z.\\]*proj)\"", \""{[0-9a-f]{8}[-]?(?:[0-9a-f]{4}[-]?){3}[0-9a-f]{12}}\""$", RegexOptions.IgnoreCase & RegexOptions.Multiline);
+                Regex regex = new Regex(@"^Project\(\""{[0-9a-f]{8}[-]?(?:[0-9a-f]{4}[-]?){3}[0-9a-f]{12}}\""\) = \""(?'name'[0-9a-z.]*)\"", \""(?'path'[0-9a-z.\\]*proj)\"", \""{[0-9a-f]{8}[-]?(?:[0-9a-f]{4}[-]?){3}[0-9a-f]{12}}\""$", RegexOptions.IgnoreCase);
 
-                string fileContent = File.ReadAllText(solutionFile);
+                string[] lines = File.ReadAllLines(solutionFile);
 
-                MatchCollection matches = regex.Matches(fileContent);
-
-                foreach (Match match in matches)
+                foreach (string line in lines)
                 {
-                    slnFile.Projects.Add(new SlnProject()
+                    Match match = regex.Match(line);
+
+                    if (match.Success)
                     {
-                        Name = match.Groups["name"].Value,
-                        Path = match.Groups["path"].Value
-                    });
+                        slnFile.Projects.Add(new SlnProject()
+                        {
+                            Name = match.Groups["name"].Value,
+                            Path = match.Groups["path"].Value
+                        });
+                    }
                 }
             }
             catch (Exception e)

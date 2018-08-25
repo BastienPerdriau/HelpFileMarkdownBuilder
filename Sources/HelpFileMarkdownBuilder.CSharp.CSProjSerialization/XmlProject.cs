@@ -6,13 +6,13 @@ namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
     /// <summary>
     /// Root of a proj file
     /// </summary>
-    [XmlRoot("Project")]
+    [XmlRoot("Project", Namespace = "http://schemas.microsoft.com/developer/msbuild/2003")]
     public class XmlProject
     {
         /// <summary>
         /// PropertyGroup nodes
         /// </summary>
-        [XmlArrayItem("PropertyGroup")]
-        public List<XmlPropertyGroup> PropertyGroups = new List<XmlPropertyGroup>();
+        [XmlElement("PropertyGroup")]
+        public List<XmlPropertyGroup> PropertyGroups { get; set; } = new List<XmlPropertyGroup>();
     }
 }

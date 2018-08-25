@@ -10,6 +10,7 @@
         /// </summary>
         public string Name { get; set; } = string.Empty;
 
+        // TODO Get relative path
         /// <summary>
         /// Path
         /// </summary>

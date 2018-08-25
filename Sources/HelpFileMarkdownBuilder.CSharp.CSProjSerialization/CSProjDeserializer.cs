@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using System.Xml.Serialization;
 
 namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
@@ -21,7 +22,7 @@ namespace HelpFileMarkdownBuilder.CSharp.CSProjSerialization
             try
             {
                 XmlSerializer serializer = new XmlSerializer(typeof(XmlProject));
-                using (StreamReader reader = new StreamReader(projectFile))
+                using (StreamReader reader = new StreamReader(projectFile, Encoding.UTF8))
                 {
                     projFile = (XmlProject)serializer.Deserialize(reader);
                 }

@@ -1,5 +1,6 @@
 ﻿using HelpFileMarkdownBuilder.Base;
 using HelpFileMarkdownBuilder.CSharp.CSProjSerialization;
+using HelpFileMarkdownBuilder.CSharp.SlnSerialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -63,7 +64,8 @@ namespace HelpFileMarkdownBuilder.CSharp
                 }
                 else if (Regex.IsMatch(sourceFile, @"([a-zA-Z\u00C0-\u024F0-9\s_\\.\-\(\):])+(\.sln)$", RegexOptions.IgnoreCase))
                 {
-                    // TODO Get all csproj files from sln file
+                    SlnFile slnFile = SlnDeserializer.Deserialize(sourceFile);
+                    projectFiles.AddRange(slnFile.Projects.Select(p => p.Path));
                     // TODO Logs debug
                 }
                 else
@@ -71,20 +73,6 @@ namespace HelpFileMarkdownBuilder.CSharp
                     // TODO Logs warn source file not good
                 }
             }
-
-            return projectFiles;
-        }
-
-        /// <summary>
-        /// Gets the project files from solution file
-        /// </summary>
-        /// <param name="solutionFile">Solution file</param>
-        /// <returns>List of project files in solution file</returns>
-        private List<string> GetProjectFilesFromSolutionFile(string solutionFile)
-        {
-            List<string> projectFiles = new List<string>();
-
-            // TODO Parse solution file to get csproj files
 
             return projectFiles;
         }
