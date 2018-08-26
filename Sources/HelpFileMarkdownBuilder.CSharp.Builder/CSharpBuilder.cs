@@ -3,6 +3,7 @@ using HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile;
 using HelpFileMarkdownBuilder.Serialization.SlnFile;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
@@ -40,6 +41,8 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
             List<string> projectFiles = GetProjectFiles();
 
             List<XmlProject> deserializedProjectFiles = projectFiles.Select(f => CSProjDeserializer.Deserialize(f)).ToList();
+
+            List<ProjectInfo> projectInfos = GetProjectInfos(deserializedProjectFiles);
 
             // TODO for each deserialized project files, find generated dlls (if not => error) and generated documentation files (if not => warning)
 
@@ -80,6 +83,46 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
             }
 
             return projectFiles;
+        }
+
+        /// <summary>
+        /// Get project infos
+        /// </summary>
+        /// <param name="xmlProjects">Informations deserialized from csproj files</param>
+        /// <returns>Project infos</returns>
+        private List<ProjectInfo> GetProjectInfos(List<XmlProject> xmlProjects)
+        {
+            List<ProjectInfo> projectInfos = new List<ProjectInfo>();
+
+            foreach (XmlProject project in xmlProjects)
+            {
+                string projectFilePath = project.ProjectFilePath;
+                string projectFileDirectory = Path.GetDirectoryName(project.ProjectFilePath);
+
+                string assemblyName = project.GeneralPropertyGroup?.AssemblyName.Value;
+                string outputType = project.GeneralPropertyGroup?.OutputType.Value;
+
+                List<BuildConfiguration> buildConfigurations = new List<BuildConfiguration>();
+
+                foreach (XmlPropertyGroup propertyGroup in project.BuildConfigurationPropertyGroups)
+                {
+                    buildConfigurations.Add(new BuildConfiguration()
+                    {
+                        Name = Regex.Match(propertyGroup.Condition, @"^ '\$\(Configuration\)\|\$\(Platform\)' == '(?'name'[a-z]*)\|[a-z]*' $", RegexOptions.IgnoreCase).Groups["name"].Value,
+                        OutputPath = Path.Combine(projectFileDirectory, propertyGroup.OutputPath.Value, $"{assemblyName}{(outputType == "Library" ? ".dll" : ".exe")}"),
+                        DocumentationFilePath = propertyGroup.DocumentationFile != null ? Path.Combine(projectFileDirectory, propertyGroup.DocumentationFile.Value) : string.Empty
+                    });
+                }
+
+                projectInfos.Add(new ProjectInfo()
+                {
+                    ProjectFilePath = projectFilePath,
+                    AssemblyName = assemblyName,
+                    BuildConfigurations = buildConfigurations.ToDictionary(c => c.Name)
+                });
+            }
+
+            return projectInfos;
         }
     }
 
