@@ -15,6 +15,12 @@ namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
         public string Condition { get; set; } = null;
 
         /// <summary>
+        /// OutputType node
+        /// </summary>
+        [XmlElement("OutputType")]
+        public XmlOutputType OutputType { get; set; } = null;
+
+        /// <summary>
         /// AssemblyName node
         /// </summary>
         [XmlElement("AssemblyName")]

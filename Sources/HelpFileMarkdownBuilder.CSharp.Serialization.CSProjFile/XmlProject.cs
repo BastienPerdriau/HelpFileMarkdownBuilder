@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Xml.Serialization;
 
 namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
@@ -20,5 +21,17 @@ namespace HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile
         /// </summary>
         [XmlElement("PropertyGroup")]
         public List<XmlPropertyGroup> PropertyGroups { get; set; } = new List<XmlPropertyGroup>();
+
+        /// <summary>
+        /// Gets the general property group
+        /// </summary>
+        [XmlIgnore]
+        public XmlPropertyGroup GeneralPropertyGroup => PropertyGroups.FirstOrDefault(g => string.IsNullOrWhiteSpace(g.Condition));
+
+        /// <summary>
+        /// Gets the property groups with build configuration
+        /// </summary>
+        [XmlIgnore]
+        public List<XmlPropertyGroup> BuildConfigurationPropertyGroups => PropertyGroups.Where(g => !string.IsNullOrWhiteSpace(g.Condition)).ToList();
     }
 }

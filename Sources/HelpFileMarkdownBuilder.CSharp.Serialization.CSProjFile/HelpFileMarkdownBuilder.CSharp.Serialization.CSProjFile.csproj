@@ -51,6 +51,7 @@
     <Compile Include="XmlAssemblyName.cs" />
     <Compile Include="XmlDocumentationFile.cs" />
     <Compile Include="XmlOutputPath.cs" />
+    <Compile Include="XmlOutputType.cs" />
     <Compile Include="XmlProject.cs" />
     <Compile Include="XmlPropertyGroup.cs" />
   </ItemGroup>
