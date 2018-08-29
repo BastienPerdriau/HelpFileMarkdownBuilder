@@ -34,6 +34,21 @@ namespace HelpFileMarkdownBuilder
         }
 
         /// <summary>
+        /// True if the builder only accepts clas libraries, False if not
+        /// </summary>
+        public bool OnlyClassLibraries
+        {
+            get
+            {
+                return ((CSharpBuilder)Builder).OnlyClassLibraries;
+            }
+            set
+            {
+                ((CSharpBuilder)Builder).OnlyClassLibraries = value;
+            }
+        }
+
+        /// <summary>
         /// Builder
         /// </summary>
         internal override Builder Builder { get; } = new CSharpBuilder();

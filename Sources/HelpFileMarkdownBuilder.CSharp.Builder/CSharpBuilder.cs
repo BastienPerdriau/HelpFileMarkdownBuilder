@@ -22,6 +22,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
         public string BuildConfiguration { get; set; } = "Release";
 
         /// <summary>
+        /// True if the builder only accepts clas libraries, False if not
+        /// </summary>
+        public bool OnlyClassLibraries { get; set; } = false;
+
+        /// <summary>
         /// Build help files from XML documentation files and assemblies
         /// </summary>
         /// <returns>Markdown documentation generated from build</returns>
@@ -94,11 +99,17 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
 
             foreach (XmlProject project in xmlProjects)
             {
+                string outputType = project.GeneralPropertyGroup?.OutputType.Value;
+                if(OnlyClassLibraries && outputType != "Library")
+                {
+                    // If only accepts class libraries and the project is not, continue to next project
+                    continue;
+                }
+
                 string projectFilePath = project.ProjectFilePath;
                 string projectFileDirectory = Path.GetDirectoryName(project.ProjectFilePath);
 
                 string assemblyName = project.GeneralPropertyGroup?.AssemblyName.Value;
-                string outputType = project.GeneralPropertyGroup?.OutputType.Value;
 
                 List<BuildConfiguration> buildConfigurations = new List<BuildConfiguration>();
 
