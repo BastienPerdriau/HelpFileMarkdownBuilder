@@ -19,5 +19,14 @@
         /// File content
         /// </summary>
         public string Content { get; set; } = string.Empty;
+
+        public void Write()
+        {
+            // TODO Check if Path exists, if not => create
+
+            // TODO Check if Name ends with .md (insensitive), if not => add it to Name (maybe add this to set of the Name property)
+
+            // TODO Write the file 
+        }
     }
 }

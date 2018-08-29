@@ -1,10 +1,12 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using HelpFileMarkdownBuilder.CSharp.Members;
 using HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile;
 using HelpFileMarkdownBuilder.Serialization.SlnFile;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
@@ -19,7 +21,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
         /// <summary>
         /// Assemblies build configuration
         /// </summary>
-        public string BuildConfiguration { get; set; }// = "Release";
+        public string BuildConfiguration { get; set; } = "Release";
 
         /// <summary>
         /// Build help files from XML documentation files and assemblies
@@ -44,11 +46,8 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
 
             List<ProjectInfo> projectInfos = GetProjectInfos(deserializedProjectFiles);
 
-            // TODO for each deserialized project files, find generated dlls (if not => error) and generated documentation files (if not => warning)
-
-            List<GeneratedFiles> generatedFiles = new List<GeneratedFiles>(); // TODO
-
             // TODO From dlls, create CSAssembly and CSNamespace class, then CSType (CSClass, CSInterface, CSEnumeration), then CSProperty and CSMethod, and then consolidate with documentation
+            List<CSMember> csMembers = GetCSMembers(projectInfos);
 
             List<HelpFile> results = new List<HelpFile>();
 
@@ -123,6 +122,40 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
             }
 
             return projectInfos;
+        }
+
+        private List<CSMember> GetCSMembers(List<ProjectInfo> projectInfos)
+        {
+            List<CSMember> csMembers = new List<CSMember>();
+
+            foreach (ProjectInfo projectInfo in projectInfos)
+            {
+                if (!projectInfo.BuildConfigurations.ContainsKey(BuildConfiguration))
+                {
+                    // TODO Logs warn
+                    continue;
+                }
+
+                BuildConfiguration config = projectInfo.BuildConfigurations[BuildConfiguration];
+
+                if (string.IsNullOrWhiteSpace(config.OutputPath))
+                {
+                    // TODO Logs warn
+                    continue;
+                }
+
+                Assembly assembly = Assembly.LoadFile(config.OutputPath);
+
+
+
+                if (string.IsNullOrWhiteSpace(config.DocumentationFilePath))
+                {
+                    // TODO Logs info
+                    continue;
+                }
+            }
+
+            return csMembers;
         }
     }
 

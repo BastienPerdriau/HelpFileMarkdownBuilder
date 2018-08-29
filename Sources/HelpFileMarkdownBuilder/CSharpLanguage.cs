@@ -29,7 +29,6 @@ namespace HelpFileMarkdownBuilder
             }
             set
             {
-                // TODO Fix
                 ((CSharpBuilder)Builder).BuildConfiguration = value;
             }
         }
@@ -37,7 +36,7 @@ namespace HelpFileMarkdownBuilder
         /// <summary>
         /// Builder
         /// </summary>
-        internal override Builder Builder => new CSharpBuilder();
+        internal override Builder Builder { get; } = new CSharpBuilder();
 
         /// <summary>
         /// Constructor
