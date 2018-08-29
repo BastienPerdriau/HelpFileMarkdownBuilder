@@ -1,4 +1,6 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -7,6 +9,15 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     /// </summary>
     public class CSAssembly : CSTypeSubset
     {
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="assembly">C-Sharp assembly</param>
+        public CSAssembly(Assembly assembly)
+        {
+            Name = Regex.Match(assembly.FullName, @"^(?'name'.*?),", RegexOptions.IgnoreCase).Groups["name"].Value;
+        }
+
         /// <summary>
         /// Return the help file to build
         /// </summary>

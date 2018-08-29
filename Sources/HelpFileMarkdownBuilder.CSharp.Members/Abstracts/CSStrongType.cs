@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -30,6 +31,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         /// <param name="csAssembly">Assembly</param>
         /// <param name="csNamespace">Namespace</param>
-        public CSStrongType(CSAssembly csAssembly, CSNamespace csNamespace) : base(csAssembly, csNamespace) { }
+        /// <param name="type">Type</param>
+        public CSStrongType(CSAssembly csAssembly, CSNamespace csNamespace, TypeInfo type) : base(csAssembly, csNamespace, type) { }
     }
 }

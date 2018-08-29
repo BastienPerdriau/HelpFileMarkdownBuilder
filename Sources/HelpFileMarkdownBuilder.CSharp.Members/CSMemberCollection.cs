@@ -39,6 +39,8 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         public List<CSEnumeration> Enumerations => this.OfType<CSEnumeration>().ToList();
 
+
+
         /// <summary>
         /// Gets the help files from the C-Sharp members collection
         /// </summary>

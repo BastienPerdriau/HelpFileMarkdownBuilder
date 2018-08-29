@@ -1,4 +1,5 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using System.Reflection;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -20,7 +21,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         /// <param name="csAssembly">Assembly</param>
         /// <param name="csNamespace">Namespace</param>
-        public CSClass(CSAssembly csAssembly, CSNamespace csNamespace) : base(csAssembly, csNamespace) { }
+        /// <param name="type">Type</param>
+        public CSClass(CSAssembly csAssembly, CSNamespace csNamespace, TypeInfo type) : base(csAssembly, csNamespace, type)
+        {
+            // TODO CSClass constructor
+        }
 
         /// <summary>
         /// Return the help file to build

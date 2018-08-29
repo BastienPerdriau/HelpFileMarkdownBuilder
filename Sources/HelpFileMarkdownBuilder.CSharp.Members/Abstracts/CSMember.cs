@@ -8,9 +8,14 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public abstract class CSMember : Member
     {
         /// <summary>
-        /// Prefix of the name in Xml documentation file
+        /// Prefix of the name in XML documentation file
         /// </summary>
         public abstract char[] XmlPrefixName { get; }
+
+        /// <summary>
+        /// Full name in XML documentation file
+        /// </summary>
+        public abstract string XmlFullName { get; }
 
         /// <summary>
         /// Name

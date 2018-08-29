@@ -8,7 +8,7 @@ namespace HelpFileMarkdownBuilder.Tests
         {
             List<string> examples = new List<string>()
             {
-                @"..\..\..\..\..\SharePointRunner\SharePointRunner.sln",
+                //@"..\..\..\..\..\SharePointRunner\SharePointRunner.sln",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder\HelpFileMarkdownBuilder.csproj",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.Base\HelpFileMarkdownBuilder.Base.csproj",
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.CSharp.Builder\HelpFileMarkdownBuilder.CSharp.Builder.csproj",
@@ -17,7 +17,7 @@ namespace HelpFileMarkdownBuilder.Tests
                 @"..\..\..\..\Sources\HelpFileMarkdownBuilder.Serialization.SlnFile\HelpFileMarkdownBuilder.Serialization.SlnFile.csproj"
             };
             var l = Language.CSharp;
-            l.BuildConfiguration = "aaaaaa";
+            l.BuildConfiguration = "Debug";
             HelpFileBuilder.BuildHelpFiles(examples, l);
         }
     }

@@ -13,6 +13,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override char[] XmlPrefixName => new char[] { 'F' };
 
         /// <summary>
+        /// Full name in XML documentation file
+        /// </summary>
+        public override string XmlFullName => string.Empty; // TODO CSEnumerationValue XmlFullName
+
+        /// <summary>
         /// Enumeration
         /// </summary>
         public CSEnumeration Enumeration { get; }

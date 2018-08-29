@@ -12,6 +12,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'P', 'F' };
 
+        /// <summary>
+        /// Full name in XML documentation file
+        /// </summary>
+        public override string XmlFullName => string.Empty; // TODO CSProperty XmlFullName
+
         // TODO Public / Private / ...
 
         // TODO Get, set, readonly

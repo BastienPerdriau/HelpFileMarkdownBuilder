@@ -10,7 +10,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Constructor
         /// </summary>
-        public CSNamespace() { }
+        /// <param name="name">Name</param>
+        public CSNamespace(string name)
+        {
+            Name = name;
+        }
 
         /// <summary>
         /// Return the help file to build
