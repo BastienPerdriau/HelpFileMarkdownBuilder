@@ -13,11 +13,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string SingleMemberTypeName => "Class";
 
         /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public override string MultipleMemberTypeName => "Classes";
-
-        /// <summary>
         /// Member file name
         /// </summary>
         public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";

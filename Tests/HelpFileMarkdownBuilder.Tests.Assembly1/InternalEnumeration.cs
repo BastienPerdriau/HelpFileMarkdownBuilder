@@ -6,13 +6,13 @@
     internal enum InternalEnumeration
     {
         /// <summary>
-        /// Internal enumeration value 1
+        /// Internal enumeration field 1
         /// </summary>
-        InternalEnumerationValue1,
+        InternalEnumerationField1,
 
         /// <summary>
-        /// Internal enumeration value 2
+        /// Internal enumeration field 2
         /// </summary>
-        InternalEnumerationValue2
+        InternalEnumerationField2
     }
 }

@@ -6,13 +6,13 @@
     public enum PublicEnumeration
     {
         /// <summary>
-        /// Public enumeration value 1
+        /// Public enumeration field 1
         /// </summary>
-        PublicEnumerationValue1,
+        PublicEnumerationField1,
 
         /// <summary>
-        /// Public enumeration value 2
+        /// Public enumeration field 2
         /// </summary>
-        PublicEnumerationValue2
+        PublicEnumerationField2
     }
 }

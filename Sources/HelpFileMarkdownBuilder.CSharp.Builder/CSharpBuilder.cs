@@ -52,9 +52,9 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
             // TODO From dlls, create CSAssembly and CSNamespace class, then CSType (CSClass, CSInterface, CSEnumeration), then CSProperty and CSMethod, and then consolidate with documentation
             CSharpAssemblyReader assemblyReader = new CSharpAssemblyReader(projectInfos, BuildConfiguration);
             assemblyReader.Read();
-
+            assemblyReader.CSMembers.GetHelpFileSummary();
             List<HelpFile> results = assemblyReader.CSMembers.GetHelpFiles();
-
+            
             return results;
         }
 

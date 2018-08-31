@@ -14,11 +14,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string SingleMemberTypeName => "Assembly";
 
         /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public override string MultipleMemberTypeName => "Assemblies";
-
-        /// <summary>
         /// Member file name
         /// </summary>
         public override string FileName => $"{Name}.{SingleMemberTypeName}.md";

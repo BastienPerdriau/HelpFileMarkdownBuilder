@@ -11,11 +11,6 @@
         public override string SingleMemberTypeName => "Property";
 
         /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public override string MultipleMemberTypeName => "Properties";
-
-        /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'P', 'F' };

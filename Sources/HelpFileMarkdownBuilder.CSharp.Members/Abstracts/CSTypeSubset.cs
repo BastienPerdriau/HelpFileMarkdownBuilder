@@ -21,21 +21,21 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Types
         /// </summary>
-        public List<CSType> Types { get; set; } = new List<CSType>();
+        public CSTypeCollection Types { get; set; } = new CSTypeCollection();
 
         /// <summary>
         /// Enumerations
         /// </summary>
-        public List<CSEnumeration> Enumerations => Types.OfType<CSEnumeration>().ToList();
+        public CSEnumerationCollection Enumerations => new CSEnumerationCollection(Types.OfType<CSEnumeration>());
 
         /// <summary>
         /// Classes
         /// </summary>
-        public List<CSClass> Classes => Types.OfType<CSClass>().ToList();
+        public CSClassCollection Classes => new CSClassCollection(Types.OfType<CSClass>());
 
         /// <summary>
         /// Interfaces
         /// </summary>
-        public List<CSInterface> Interfaces => Types.OfType<CSInterface>().ToList();
+        public CSInterfaceCollection Interfaces => new CSInterfaceCollection(Types.OfType<CSInterface>());
     }
 }

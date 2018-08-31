@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -14,11 +13,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string SingleMemberTypeName => "Enumeration";
 
         /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public override string MultipleMemberTypeName => "Enumeration";
-
-        /// <summary>
         /// Member file name
         /// </summary>
         public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
@@ -26,7 +20,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// List of values
         /// </summary>
-        public List<CSEnumerationValue> Values { get; set; } = new List<CSEnumerationValue>();
+        public CSEnumerationFieldCollection Fields { get; set; } = new CSEnumerationFieldCollection();
 
         /// <summary>
         /// Constructor

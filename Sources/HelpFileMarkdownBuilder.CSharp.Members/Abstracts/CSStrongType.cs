@@ -14,17 +14,17 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Members
         /// </summary>
-        public List<CSStrongTypeMember> Members { get; set; } = new List<CSStrongTypeMember>();
+        public CSStrongTypeMemberCollection Members { get; set; } = new CSStrongTypeMemberCollection();
 
         /// <summary>
         /// Properties
         /// </summary>
-        public List<CSProperty> Properties => Members.OfType<CSProperty>().ToList();
+        public CSPropertyCollection Properties => new CSPropertyCollection(Members.OfType<CSProperty>());
 
         /// <summary>
         /// Methods
         /// </summary>
-        public List<CSMethod> Methods => Members.OfType<CSMethod>().ToList();
+        public CSMethodCollection Methods => new CSMethodCollection(Members.OfType<CSMethod>());
 
         /// <summary>
         /// Constructor

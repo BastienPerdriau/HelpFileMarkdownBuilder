@@ -11,11 +11,6 @@
         public override string SingleMemberTypeName => "Namespace";
 
         /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public override string MultipleMemberTypeName => "Namespaces";
-
-        /// <summary>
         /// Member file name
         /// </summary>
         public override string FileName => $"{Name}.{SingleMemberTypeName}.md";

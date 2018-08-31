@@ -54,15 +54,27 @@
     <Compile Include="Abstracts\CSType.cs" />
     <Compile Include="Abstracts\CSTypeSubset.cs" />
     <Compile Include="CSAssembly.cs" />
+    <Compile Include="Collections\CSAssemblyCollection.cs" />
     <Compile Include="CSClass.cs" />
+    <Compile Include="Collections\CSClassCollection.cs" />
     <Compile Include="CSEnumeration.cs" />
-    <Compile Include="CSEnumerationValue.cs" />
+    <Compile Include="Collections\CSEnumerationCollection.cs" />
+    <Compile Include="CSEnumerationField.cs" />
+    <Compile Include="Collections\CSEnumerationFieldCollection.cs" />
     <Compile Include="CSInterface.cs" />
     <Compile Include="Collections\CSMemberCollection.cs" />
-    <Compile Include="Collections\CSMemberSummary.cs" />
+    <Compile Include="CSMemberSummary.cs" />
+    <Compile Include="Collections\CSInterfaceCollection.cs" />
     <Compile Include="CSMethod.cs" />
+    <Compile Include="Collections\CSMethodCollection.cs" />
     <Compile Include="CSNamespace.cs" />
+    <Compile Include="Collections\CSNamespaceCollection.cs" />
     <Compile Include="CSProperty.cs" />
+    <Compile Include="Collections\CSPropertyCollection.cs" />
+    <Compile Include="Collections\CSStrongTypeCollection.cs" />
+    <Compile Include="Collections\CSStrongTypeMemberCollection.cs" />
+    <Compile Include="Collections\CSTypeCollection.cs" />
+    <Compile Include="Collections\CSTypeSubsetCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

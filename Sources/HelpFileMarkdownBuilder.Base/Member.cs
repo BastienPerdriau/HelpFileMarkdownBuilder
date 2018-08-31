@@ -20,11 +20,6 @@
         /// </summary>
         public abstract string SingleMemberTypeName { get; }
 
-        /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public abstract string MultipleMemberTypeName { get; }
-
         #region Help File
         /// <summary>
         /// Member file name
@@ -37,7 +32,7 @@
         /// <returns>Markdown array row</returns>
         public string GetCoreMarkdown()
         {
-            return $"|{Name}|{Summary}|";
+            return this.GetArrayRowView(m => m.Name, m => m.Summary);
         }
 
         /// <summary>
@@ -52,7 +47,8 @@
         /// <returns>Help file to build</returns>
         public HelpFile ToHelpFile()
         {
-            return new HelpFile() {
+            return new HelpFile()
+            {
                 Name = FileName,
                 Content = ToMarkdown()
             };

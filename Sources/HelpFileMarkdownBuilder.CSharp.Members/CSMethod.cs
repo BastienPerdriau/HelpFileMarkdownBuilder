@@ -11,11 +11,6 @@
         public override string SingleMemberTypeName => "Method";
 
         /// <summary>
-        /// Multiple member type name
-        /// </summary>
-        public override string MultipleMemberTypeName => "Methods";
-
-        /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'M' };

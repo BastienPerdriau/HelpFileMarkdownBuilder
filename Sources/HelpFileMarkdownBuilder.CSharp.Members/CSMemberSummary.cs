@@ -8,7 +8,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     /// <summary>
     /// Summary of C-Sharp members
     /// </summary>
-    public class CSMemberSummary : List<CSMember>
+    public class CSMemberSummary : CSMemberCollection<CSMember>
     {
         /// <summary>
         /// API name
@@ -23,32 +23,43 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Gets the namespaces from the C-Sharp members collection
         /// </summary>
-        public List<CSNamespace> Namespaces => this.OfType<CSNamespace>().ToList();
+        public CSNamespaceCollection Namespaces => new CSNamespaceCollection(this.OfType<CSNamespace>());
 
         /// <summary>
         /// Gets the assemblies from the C-Sharp members collection
         /// </summary>
-        public List<CSAssembly> Assemblies => this.OfType<CSAssembly>().ToList();
+        public CSAssemblyCollection Assemblies => new CSAssemblyCollection(this.OfType<CSAssembly>());
 
         /// <summary>
         /// Gets the types from the C-Sharp members collection
         /// </summary>
-        public List<CSType> Types => this.OfType<CSType>().ToList();
+        public CSTypeCollection Types => new CSTypeCollection(this.OfType<CSType>());
 
         /// <summary>
         /// Gets the classes from the C-Sharp members collection
         /// </summary>
-        public List<CSClass> Classes => this.OfType<CSClass>().ToList();
+        public CSClassCollection Classes => new CSClassCollection(this.OfType<CSClass>());
 
         /// <summary>
         /// Gets the interfaces from the C-Sharp members collection
         /// </summary>
-        public List<CSInterface> Interfaces => this.OfType<CSInterface>().ToList();
+        public CSInterfaceCollection Interfaces => new CSInterfaceCollection(this.OfType<CSInterface>());
 
         /// <summary>
         /// Gets the enumerations from the C-Sharp members collection
         /// </summary>
-        public List<CSEnumeration> Enumerations => this.OfType<CSEnumeration>().ToList();
+        public CSEnumerationCollection Enumerations => new CSEnumerationCollection(this.OfType<CSEnumeration>());
+
+        /// <summary>
+        /// Empty constructor
+        /// </summary>
+        public CSMemberSummary() : base() { }
+
+        /// <summary>
+        /// Constructor with list initializer
+        /// </summary>
+        /// <param name="members">Members</param>
+        public CSMemberSummary(IEnumerable<CSMember> members) : base(members) { }
 
         /// <summary>
         /// Gets a summary of documented namespaces
@@ -68,13 +79,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
             builder.AppendLine($"# {ApiName}");
             builder.AppendLine($"#### {ApiVersion}");
             builder.AppendLine();
-            builder.AppendLine("|Name|Description|");
-            builder.AppendLine("|-|-|");
-
-            foreach (CSNamespace csNamespace in Namespaces)
-            {
-                builder.AppendLine($"|{csNamespace.Name} Namespace|{csNamespace.Summary}|"); // TODO Add link to namespace on Name property
-            }
+            builder.Append(Namespaces.GetCoreListView(false));
 
             summary.Content = builder.ToString();
 
