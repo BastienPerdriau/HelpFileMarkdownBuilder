@@ -6,9 +6,9 @@ using System.Text;
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
-    /// Collection of C-Sharp members
+    /// Summary of C-Sharp members
     /// </summary>
-    public class CSMemberCollection : List<CSMember>
+    public class CSMemberSummary : List<CSMember>
     {
         /// <summary>
         /// API name

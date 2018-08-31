@@ -24,7 +24,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
         /// <summary>
         /// List of C-Sharp members
         /// </summary>
-        public CSMemberCollection CSMembers { get; } = new CSMemberCollection();
+        public CSMemberSummary CSMembers { get; } = new CSMemberSummary();
 
         /// <summary>
         /// Constructor
