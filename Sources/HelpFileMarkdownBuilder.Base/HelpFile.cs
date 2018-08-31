@@ -31,8 +31,10 @@ namespace HelpFileMarkdownBuilder.Base
                 // If file name does not finish a Markdown extension, add .md
                 if (!Regex.IsMatch(value, ".(?:md|markdown|mdown|markdn|workbook)$", RegexOptions.IgnoreCase))
                 {
-                    name = $"{value}.md";
+                    value = $"{value}.md";
                 }
+
+                name = value;
             }
         }
 
