@@ -53,6 +53,7 @@
     <Compile Include="InternalInheritedClassImplementedInterface.cs" />
     <Compile Include="InternalInterface.cs" />
     <Compile Include="InternalStaticClass.cs" />
+    <Compile Include="InternalStruct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PublicAbstractClass.cs" />
     <Compile Include="PublicClass.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="PublicInheritedClassImplementedInterface.cs" />
     <Compile Include="PublicInterface.cs" />
     <Compile Include="PublicStaticClass.cs" />
+    <Compile Include="PublicStruct.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
