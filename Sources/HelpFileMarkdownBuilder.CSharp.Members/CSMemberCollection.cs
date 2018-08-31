@@ -39,12 +39,31 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         public List<CSEnumeration> Enumerations => this.OfType<CSEnumeration>().ToList();
 
+        /// <summary>
+        /// Gets a summary of documented namespaces
+        /// </summary>
+        /// <returns>Summary of documented namespaces</returns>
+        public HelpFile GetHelpFileSummary()
+        {
+            HelpFile summary = new HelpFile();
+            
+            // TODO Make summary
 
+            return summary;
+        }
 
         /// <summary>
         /// Gets the help files from the C-Sharp members collection
         /// </summary>
         /// <returns>Help files from the C-Sharp members collection</returns>
-        public List<HelpFile> GetHelpFiles() => this.Select(m => m.ToMarkdown()).ToList();
+        public List<HelpFile> GetHelpFiles()
+        {
+            List<HelpFile> helpFiles = new List<HelpFile>();
+
+            helpFiles.Add(GetHelpFileSummary());
+            helpFiles.AddRange(this.Select(m => m.ToMarkdown()).ToList());
+
+            return helpFiles;
+        }
     }
 }
