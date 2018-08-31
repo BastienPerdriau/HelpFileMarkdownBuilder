@@ -1,6 +1,7 @@
 ﻿using HelpFileMarkdownBuilder.Base;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -55,9 +56,27 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <returns>Summary of documented namespaces</returns>
         public HelpFile GetHelpFileSummary()
         {
-            HelpFile summary = new HelpFile();
-            
+            HelpFile summary = new HelpFile()
+            {
+                Name = "Summary"
+            };
+
             // TODO Make summary
+
+            StringBuilder builder = new StringBuilder();
+
+            builder.AppendLine($"# {ApiName}");
+            builder.AppendLine($"#### {ApiVersion}");
+            builder.AppendLine();
+            builder.AppendLine("|Name|Description|");
+            builder.AppendLine("|-|-|");
+
+            foreach (CSNamespace csNamespace in Namespaces)
+            {
+                builder.AppendLine($"|{csNamespace.Name} Namespace|{csNamespace.Summary}|"); // TODO Add link to namespace on Name property
+            }
+
+            summary.Content = builder.ToString();
 
             return summary;
         }
