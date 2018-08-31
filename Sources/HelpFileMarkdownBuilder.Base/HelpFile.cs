@@ -43,6 +43,9 @@ namespace HelpFileMarkdownBuilder.Base
         /// </summary>
         public string Content { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Write a help file into a physical file
+        /// </summary>
         public void Write()
         {
             // TODO Check if Path exists, if not => create
