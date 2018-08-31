@@ -38,7 +38,5 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
             Assembly = csAssembly;
             Namespace = csNamespace;
         }
-
-        
     }
 }

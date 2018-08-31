@@ -9,6 +9,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSInterface : CSStrongType
     {
         /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Namespace.Name}.{Name}.Interface.md";
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="csAssembly">Assembly</param>
@@ -20,13 +25,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current interface
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current interface</returns>
+        public override string ToMarkdown()
         {
             // TODO CSInterface ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

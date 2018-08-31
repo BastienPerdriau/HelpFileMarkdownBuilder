@@ -17,6 +17,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         public override string XmlFullName => string.Empty; // TODO CSMethod XmlFullName
 
+        /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.Method.md";
+
         // TODO Parameters
 
         // TODO Public / Private / ...
@@ -32,13 +37,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public CSMethod(CSStrongType csStrongType) : base(csStrongType) { }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current method
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current method</returns>
+        public override string ToMarkdown()
         {
             // TODO CSMethod ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

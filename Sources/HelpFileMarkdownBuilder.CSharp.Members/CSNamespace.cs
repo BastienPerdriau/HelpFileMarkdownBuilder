@@ -8,6 +8,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSNamespace : CSTypeSubset
     {
         /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Name}.Namespace.md";
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="name">Name</param>
@@ -17,13 +22,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current namespace
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current namespace</returns>
+        public override string ToMarkdown()
         {
             // TODO CSNamespace ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using HelpFileMarkdownBuilder.Base;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Reflection;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
@@ -9,6 +8,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     /// </summary>
     public class CSEnumeration : CSType
     {
+        /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Namespace.Name}.{Name}.Enumeration.md";
+
         /// <summary>
         /// List of values
         /// </summary>
@@ -26,13 +30,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current enumeration
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current enumeration</returns>
+        public override string ToMarkdown()
         {
             // TODO CSEnumeration ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

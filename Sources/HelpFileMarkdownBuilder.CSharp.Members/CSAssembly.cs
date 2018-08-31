@@ -10,6 +10,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSAssembly : CSTypeSubset
     {
         /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Name}.Assembly.md";
+
+        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="assembly">C-Sharp assembly</param>
@@ -19,13 +24,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current assembly
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current assembly</returns>
+        public override string ToMarkdown()
         {
             // TODO CSAssembly ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

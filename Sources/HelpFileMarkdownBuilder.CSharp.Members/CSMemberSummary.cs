@@ -58,7 +58,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         {
             HelpFile summary = new HelpFile()
             {
-                Name = "Summary"
+                Name = $"{ApiName}.{ApiVersion}.Summary.md"
             };
 
             // TODO Make summary
@@ -90,7 +90,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
             List<HelpFile> helpFiles = new List<HelpFile>();
 
             helpFiles.Add(GetHelpFileSummary());
-            helpFiles.AddRange(this.Select(m => m.ToMarkdown()).ToList());
+            helpFiles.AddRange(this.Select(m => m.ToHelpFile()).ToList());
 
             return helpFiles;
         }

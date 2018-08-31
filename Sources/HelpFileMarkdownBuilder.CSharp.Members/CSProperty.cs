@@ -17,6 +17,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// </summary>
         public override string XmlFullName => string.Empty; // TODO CSProperty XmlFullName
 
+        /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.Property.md";
+
         // TODO Public / Private / ...
 
         // TODO Get, set, readonly
@@ -32,13 +37,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public CSProperty(CSStrongType csStrongType) : base(csStrongType) { }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current property
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current property</returns>
+        public override string ToMarkdown()
         {
             // TODO CSProperty ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

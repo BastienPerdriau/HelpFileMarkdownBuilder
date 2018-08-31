@@ -18,6 +18,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string XmlFullName => string.Empty; // TODO CSEnumerationValue XmlFullName
 
         /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Enumeration.Namespace.Name}.{Enumeration.Name}.{Name}.EnumerationValue.md";
+
+        /// <summary>
         /// Enumeration
         /// </summary>
         public CSEnumeration Enumeration { get; }
@@ -32,13 +37,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current enumeration value
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current enumeration value</returns>
+        public override string ToMarkdown()
         {
             // TODO CSEnumerationValue ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }

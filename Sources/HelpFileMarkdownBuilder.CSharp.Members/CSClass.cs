@@ -8,6 +8,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     /// </summary>
     public class CSClass : CSStrongType
     {
+        /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Namespace.Name}.{Name}.Class.md";
+
         // TODO Static / Not
 
         // TODO Abstract / Not
@@ -28,13 +33,13 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         }
 
         /// <summary>
-        /// Return the help file to build
+        /// Gets the Markdown content for the current class
         /// </summary>
-        /// <returns>Help file to build</returns>
-        public override HelpFile ToMarkdown()
+        /// <returns>Markdown content for the current class</returns>
+        public override string ToMarkdown()
         {
             // TODO CSClass ToMarkdown
-            return null;
+            return string.Empty;
         }
     }
 }
