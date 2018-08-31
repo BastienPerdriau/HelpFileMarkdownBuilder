@@ -75,6 +75,8 @@
     <Compile Include="Collections\CSStrongTypeMemberCollection.cs" />
     <Compile Include="Collections\CSTypeCollection.cs" />
     <Compile Include="Collections\CSTypeSubsetCollection.cs" />
+    <Compile Include="CSStruct.cs" />
+    <Compile Include="CSStructCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

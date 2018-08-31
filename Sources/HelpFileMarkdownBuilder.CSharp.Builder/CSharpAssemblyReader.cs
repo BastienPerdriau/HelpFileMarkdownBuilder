@@ -110,7 +110,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
                     }
 
                     // Read doc to get type summary
-                    csType.Summary = doc.Members.FirstOrDefault(m => m.Name == csType.XmlFullName)?.Summary.Value;
+                    csType.Summary = doc?.Members.FirstOrDefault(m => m.Name == csType.XmlFullName)?.Summary.Value;
 
                     csAssembly.Types.Add(csType);
                     csNamespace.Types.Add(csType);

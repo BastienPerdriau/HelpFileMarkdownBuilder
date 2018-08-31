@@ -1,4 +1,6 @@
-﻿namespace HelpFileMarkdownBuilder.Base
+﻿using System.IO;
+
+namespace HelpFileMarkdownBuilder.Base
 {
     /// <summary>
     /// Help file built
@@ -18,13 +20,22 @@
         /// <summary>
         /// Write a help file into a physical file
         /// </summary>
-        public void Write()
+        /// <param name="folderPath">Folderf path where write the file</param>
+        public void Write(string folderPath)
         {
-            // TODO Check if Path exists, if not => create
+            if (!Directory.Exists(folderPath))
+            {
+                // TODO Logs warn
+                return;
+            }
 
-            // TODO Check if Name ends with .md (insensitive), if not => add it to Name (maybe add this to set of the Name property)
+            // Write the file
+            using (StreamWriter writer = File.CreateText(Path.Combine(folderPath, Name)))
+            {
+                writer.Write(Content);
+            }
 
-            // TODO Write the file 
+            // TODO Logs Info
         }
     }
 }

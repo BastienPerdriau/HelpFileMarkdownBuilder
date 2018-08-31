@@ -4,24 +4,14 @@ using System.Text;
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
-    /// C# Class
+    /// C# Struct
     /// </summary>
-    public class CSClass : CSStrongType
+    public class CSStruct : CSType
     {
         /// <summary>
         /// Single member type name
         /// </summary>
-        public override string SingleMemberTypeName => "Class";
-
-        // TODO Static / Not
-
-        // TODO Abstract / Not
-
-        // TODO Inherited classes
-
-        // TODO Implemented interfaces
-
-        // TODO Constructors
+        public override string SingleMemberTypeName => "Struct";
 
         /// <summary>
         /// Constructor
@@ -29,15 +19,15 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <param name="csAssembly">Assembly</param>
         /// <param name="csNamespace">Namespace</param>
         /// <param name="type">Type</param>
-        public CSClass(CSAssembly csAssembly, CSNamespace csNamespace, TypeInfo type) : base(csAssembly, csNamespace, type)
+        public CSStruct(CSAssembly csAssembly, CSNamespace csNamespace, TypeInfo type) : base(csAssembly, csNamespace, type)
         {
-            // TODO CSClass constructor
+            // TODO CSStruct constructor
         }
 
         /// <summary>
-        /// Gets the Markdown content for the current class
+        /// Gets the Markdown content for the current struct
         /// </summary>
-        /// <returns>Markdown content for the current class</returns>
+        /// <returns>Markdown content for the current struct</returns>
         public override string ToMarkdown()
         {
             StringBuilder builder = new StringBuilder();
@@ -50,17 +40,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
 
             builder.AppendLine(Summary);
 
-            // TODO CSClass ToMarkdown
-
-            // TODO Inheritance
-            // TODO Implements
-            // TODO internal / public, etc
-
-            // TODO Constructors
-
-            // TODO Properties
-
-            // TODO Methods
+            // TODO CSStruct ToMarkdown
 
             return builder.ToString();
         }

@@ -23,15 +23,5 @@
         {
             Name = name;
         }
-
-        /// <summary>
-        /// Gets the Markdown content for the current namespace
-        /// </summary>
-        /// <returns>Markdown content for the current namespace</returns>
-        public override string ToMarkdown()
-        {
-            // TODO CSNamespace ToMarkdown
-            return string.Empty;
-        }
     }
 }

@@ -19,14 +19,32 @@ namespace HelpFileMarkdownBuilder.Base
         /// <summary>
         /// Gets a list view of the members
         /// </summary>
+        /// <param name="WithTitle">True if the member list is preceded with title, False if not</param>
+        /// <param name="WithHeaders">True is the member list has headers, False if not</param>
         /// <param name="properties">Properties to display</param>
         /// <returns>List view of properties of the members</returns>
-        public string GetListView(params Expression<Func<T, object>>[] properties)
+        public string GetListView(bool WithTitle = true, bool WithHeaders = true, params Expression<Func<T, object>>[] properties)
         {
             StringBuilder builder = new StringBuilder();
 
-            builder.AppendLine(Utils.GetFormatedArrayRowView(properties.Select(p => ((MemberExpression)p.Body).Member.Name)));
-            builder.AppendLine(Utils.GetFormatedArrayHeaderRow(properties.Length));
+            // Title
+            if (WithTitle)
+            {
+                builder.AppendLine($"## {MultipleMemberTypeName}");
+                builder.AppendLine();
+            }
+
+            // Array headers
+            if (WithHeaders)
+            {
+                builder.Append(Utils.GetFormatedArrayHeader(properties.Select(p => ((MemberExpression)p.Body).Member.Name)));
+            }
+            else
+            {
+                builder.Append(Utils.GetFormatedArrayHeader(properties.Length));
+            }
+            
+            // Array content
             builder.Append(string.Join(Environment.NewLine, this.Select(m => m.GetArrayRowView(properties))));
 
             return builder.ToString();
@@ -36,21 +54,8 @@ namespace HelpFileMarkdownBuilder.Base
         /// Gets a list wiew of core properties of the members
         /// </summary>
         /// <param name="WithTitle">True if the member list is preceded with title, False if not</param>
-        /// <returns>List vioew of members</returns>
-        public string GetCoreListView(bool WithTitle = true)
-        {
-            StringBuilder builder = new StringBuilder();
-
-            if (WithTitle)
-            {
-                builder.AppendLine($"## {MultipleMemberTypeName}");
-                builder.AppendLine();
-            }
-
-            builder.Append(GetListView(m => m.Name, m => m.Summary));
-
-            return builder.ToString();
-        }
+        /// <returns>List view of members</returns>
+        public string GetCoreListView(bool WithTitle = true) => GetListView(WithTitle, false, m => m.Name, m => m.Summary);
 
         /// <summary>
         /// Empty constructor

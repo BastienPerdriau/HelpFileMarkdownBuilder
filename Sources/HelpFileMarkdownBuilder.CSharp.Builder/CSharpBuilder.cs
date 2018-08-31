@@ -52,9 +52,14 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
             // TODO From dlls, create CSAssembly and CSNamespace class, then CSType (CSClass, CSInterface, CSEnumeration), then CSProperty and CSMethod, and then consolidate with documentation
             CSharpAssemblyReader assemblyReader = new CSharpAssemblyReader(projectInfos, BuildConfiguration);
             assemblyReader.Read();
-            assemblyReader.CSMembers.GetHelpFileSummary();
+
+            // TODO Create a MemberSummary common to all languages, and have a better integration of following properties
+            assemblyReader.CSMembers.ApiName = ProjectName;
+            assemblyReader.CSMembers.ApiVersion = ProjectVersion;
+            assemblyReader.CSMembers.UpdateDate = UpdateDate;
+
             List<HelpFile> results = assemblyReader.CSMembers.GetHelpFiles();
-            
+
             return results;
         }
 
@@ -100,7 +105,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
             foreach (XmlProject project in xmlProjects)
             {
                 string outputType = project.GeneralPropertyGroup?.OutputType.Value;
-                if(OnlyClassLibraries && outputType != "Library")
+                if (OnlyClassLibraries && outputType != "Library")
                 {
                     // If only accepts class libraries and the project is not, continue to next project
                     continue;

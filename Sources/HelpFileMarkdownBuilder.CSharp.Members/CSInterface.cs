@@ -13,11 +13,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string SingleMemberTypeName => "Interface";
 
         /// <summary>
-        /// Member file name
-        /// </summary>
-        public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
-
-        /// <summary>
         /// Constructor
         /// </summary>
         /// <param name="csAssembly">Assembly</param>

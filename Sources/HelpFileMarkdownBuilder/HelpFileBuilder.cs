@@ -1,4 +1,5 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using System;
 using System.Collections.Generic;
 
 namespace HelpFileMarkdownBuilder
@@ -16,9 +17,14 @@ namespace HelpFileMarkdownBuilder
         public static void BuildHelpFiles(List<string> sourceFiles, Language language)
         {
             Builder builder = language.Builder;
+
             builder.SourceFiles = sourceFiles;
+            builder.ProjectName = "My awesome project";
+            builder.ProjectVersion = "1.0.0.0";
 
             List<HelpFile> files = builder.BuildHelpFiles();
+
+            files.ForEach(f => f.Write(Environment.CurrentDirectory));
         }
     }
 }

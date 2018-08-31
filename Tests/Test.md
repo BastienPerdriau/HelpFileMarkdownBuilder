@@ -1,8 +1,14 @@
-# .NET Framework API Reference
-#### Version 2.10.36
+##### Methods
+Methods
 
-|Name   |Description   |
-|---|---|
-|   |   |
-|   |   |
-|   |   |
+
+|||
+|-|-|
+|HelpFileMarkdownBuilder|fxgvfd|
+|HelpFileMarkdownBuilder.Base|fdgdfgdf|
+|HelpFileMarkdownBuilder.CSharp.Builder|rfgfedgfd|
+|HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile|ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff|
+|HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile||
+|HelpFileMarkdownBuilder.Serialization.SlnFile||
+|HelpFileMarkdownBuilder.Tests||
+|HelpFileMarkdownBuilder.Tests.Assembly1||

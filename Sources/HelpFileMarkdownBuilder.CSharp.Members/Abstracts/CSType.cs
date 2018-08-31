@@ -13,6 +13,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string FullName => $"{Assembly.FullName}.{Name}";
 
         /// <summary>
+        /// Member file name
+        /// </summary>
+        public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
+
+        /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char['T'];

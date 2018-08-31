@@ -1,4 +1,5 @@
 ﻿using HelpFileMarkdownBuilder.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// API version
         /// </summary>
         public string ApiVersion { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Date of building doc
+        /// </summary>
+        public DateTime UpdateDate { get; set; }
 
         /// <summary>
         /// Gets the namespaces from the C-Sharp members collection
@@ -66,12 +72,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
                 Name = $"{ApiName}.{ApiVersion}.Summary.md"
             };
 
-            // TODO Make summary
-
             StringBuilder builder = new StringBuilder();
 
             builder.AppendLine($"# {ApiName}");
-            builder.AppendLine($"#### {ApiVersion}");
+            builder.AppendLine($"#### Version {ApiVersion}");
+            builder.AppendLine($"#### Update date {UpdateDate.ToString("dd-MM-yyyy")}");
             builder.AppendLine();
             builder.Append(Namespaces.GetCoreListView(false));
 

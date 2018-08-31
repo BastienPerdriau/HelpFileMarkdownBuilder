@@ -27,6 +27,15 @@
         public abstract string FileName { get; }
 
         /// <summary>
+        /// Gets the title formated for Markdown
+        /// </summary>
+        /// <returns>Title formated for Markdown</returns>
+        public string GetFormatedTitleMarkdown()
+        {
+            return $"# {Name} {SingleMemberTypeName}";
+        }
+
+        /// <summary>
         /// Gets a Markdown array row with Name and Summary
         /// </summary>
         /// <returns>Markdown array row</returns>

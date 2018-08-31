@@ -19,22 +19,12 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string FileName => $"{Name}.{SingleMemberTypeName}.md";
 
         /// <summary>
-        /// Constructor
+        /// ConstructoR
         /// </summary>
         /// <param name="assembly">C-Sharp assembly</param>
         public CSAssembly(Assembly assembly)
         {
             Name = Regex.Match(assembly.FullName, @"^(?'name'.*?),", RegexOptions.IgnoreCase).Groups["name"].Value;
-        }
-
-        /// <summary>
-        /// Gets the Markdown content for the current assembly
-        /// </summary>
-        /// <returns>Markdown content for the current assembly</returns>
-        public override string ToMarkdown()
-        {
-            // TODO CSAssembly ToMarkdown
-            return string.Empty;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace HelpFileMarkdownBuilder.Base
 {
@@ -7,6 +8,21 @@ namespace HelpFileMarkdownBuilder.Base
     /// </summary>
     public abstract class Builder
     {
+        /// <summary>
+        /// Name of the project
+        /// </summary>
+        public string ProjectName { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Version of the project
+        /// </summary>
+        public string ProjectVersion { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Date of building the doc
+        /// </summary>
+        public DateTime UpdateDate { get; set; } = DateTime.Now;
+
         /// <summary>
         /// Files to build help files from
         /// </summary>

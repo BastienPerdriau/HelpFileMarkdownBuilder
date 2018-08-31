@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Text;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -36,5 +37,30 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// Interfaces
         /// </summary>
         public CSInterfaceCollection Interfaces => new CSInterfaceCollection(Types.OfType<CSInterface>());
+
+        /// <summary>
+        /// Structs
+        /// </summary>
+        public CSStructCollection Structs => new CSStructCollection(Types.OfType<CSStruct>());
+
+        /// <summary>
+        /// Gets the Markdown content for the current namespace
+        /// </summary>
+        /// <returns>Markdown content for the current namespace</returns>
+        public override string ToMarkdown()
+        {
+            StringBuilder builder = new StringBuilder();
+
+            builder.AppendLine(GetFormatedTitleMarkdown());
+
+            builder.AppendLine(Summary);
+
+            builder.AppendLine(Classes.GetCoreListView());
+            builder.AppendLine(Interfaces.GetCoreListView());
+            builder.AppendLine(Enumerations.GetCoreListView());
+            builder.AppendLine(Structs.GetCoreListView());
+
+            return builder.ToString();
+        }
     }
 }

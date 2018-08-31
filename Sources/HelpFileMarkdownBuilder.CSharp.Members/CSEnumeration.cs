@@ -13,11 +13,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public override string SingleMemberTypeName => "Enumeration";
 
         /// <summary>
-        /// Member file name
-        /// </summary>
-        public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
-
-        /// <summary>
         /// List of values
         /// </summary>
         public CSEnumerationFieldCollection Fields { get; set; } = new CSEnumerationFieldCollection();
