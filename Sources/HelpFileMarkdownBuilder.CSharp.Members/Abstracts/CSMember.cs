@@ -8,6 +8,11 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public abstract class CSMember : Member
     {
         /// <summary>
+        /// Member full name
+        /// </summary>
+        public virtual string FullName { get; protected set; }
+        
+        /// <summary>
         /// Prefix of the name in XML documentation file
         /// </summary>
         public abstract char[] XmlPrefixName { get; }
@@ -15,6 +20,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Full name in XML documentation file
         /// </summary>
-        public abstract string XmlFullName { get; }
+        public string XmlFullName => $"{XmlPrefixName}:{FullName}";
     }
 }

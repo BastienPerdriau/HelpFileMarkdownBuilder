@@ -8,14 +8,14 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public abstract class CSType : CSMember
     {
         /// <summary>
+        /// Member full name
+        /// </summary>
+        public override string FullName => $"{Assembly.FullName}.{Name}";
+
+        /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char['T'];
-
-        /// <summary>
-        /// Full name in XML documentation file
-        /// </summary>
-        public override string XmlFullName => string.Empty; // TODO CSMethod XmlFullName
         
         /// <summary>
         /// Assembly

@@ -1,22 +1,21 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
-    /// C# Type subset
+    /// C# Type subset (Assemblies, Namesapces)
     /// </summary>
     public abstract class CSTypeSubset : CSMember
     {
         /// <summary>
+        /// Member full name
+        /// </summary>
+        public override string FullName => Name;
+
+        /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char[] { };
-
-        /// <summary>
-        /// Full name in XML documentation file
-        /// </summary>
-        public override string XmlFullName => string.Empty;
 
         /// <summary>
         /// Types

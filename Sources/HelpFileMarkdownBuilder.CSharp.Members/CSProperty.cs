@@ -16,11 +16,6 @@
         public override char[] XmlPrefixName => new char[] { 'P', 'F' };
 
         /// <summary>
-        /// Full name in XML documentation file
-        /// </summary>
-        public override string XmlFullName => string.Empty; // TODO CSProperty XmlFullName
-
-        /// <summary>
         /// Member file name
         /// </summary>
         public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.{SingleMemberTypeName}.md";

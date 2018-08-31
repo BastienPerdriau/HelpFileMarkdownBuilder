@@ -6,6 +6,11 @@
     public abstract class CSStrongTypeMember : CSMember
     {
         /// <summary>
+        /// Member full name
+        /// </summary>
+        public override string FullName => $"{StrongType.FullName}.{Name}";
+
+        /// <summary>
         /// Strong Type
         /// </summary>
         public CSStrongType StrongType { get; }

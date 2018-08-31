@@ -1,4 +1,5 @@
 ﻿using HelpFileMarkdownBuilder.CSharp.Members;
+using HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -61,6 +62,14 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
                 // Read assembly
                 Assembly assembly = Assembly.LoadFile(Path.GetFullPath(config.OutputPath)); // Set full path in BuildConfiguration object
 
+                // Create doc object
+                XmlDoc doc = default;
+
+                if (!string.IsNullOrWhiteSpace(config.DocumentationFilePath))
+                {
+                    doc = XmlDocDeserializer.Deserialize(config.DocumentationFilePath);
+                }
+                
                 // Create assembly object
                 CSAssembly csAssembly = new CSAssembly(assembly);
                 CSMembers.Add(csAssembly);
@@ -100,15 +109,12 @@ namespace HelpFileMarkdownBuilder.CSharp.Builder
                         csType = new CSEnumeration(csAssembly, csNamespace, type);
                     }
 
+                    // Read doc to get type summary
+                    csType.Summary = doc.Members.FirstOrDefault(m => m.Name == csType.XmlFullName)?.Summary.Value;
+
                     csAssembly.Types.Add(csType);
                     csNamespace.Types.Add(csType);
                     CSMembers.Add(csType);
-                }
-
-                if (string.IsNullOrWhiteSpace(config.DocumentationFilePath))
-                {
-                    // TODO Logs info
-                    continue;
                 }
             }
         }

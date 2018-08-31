@@ -6,6 +6,11 @@
     public class CSEnumerationField : CSMember
     {
         /// <summary>
+        /// Member full name
+        /// </summary>
+        public override string FullName => $"{Enumeration.FullName}.{Name}";
+
+        /// <summary>
         /// Single member type name
         /// </summary>
         public override string SingleMemberTypeName => "Field";
@@ -14,11 +19,6 @@
         /// Prefix of the name in Xml documentation file
         /// </summary>
         public override char[] XmlPrefixName => new char[] { 'F' };
-
-        /// <summary>
-        /// Full name in XML documentation file
-        /// </summary>
-        public override string XmlFullName => string.Empty; // TODO CSEnumerationField XmlFullName
 
         /// <summary>
         /// Member file name
