@@ -1,4 +1,6 @@
-﻿namespace HelpFileMarkdownBuilder.Base
+﻿using System.Text.RegularExpressions;
+
+namespace HelpFileMarkdownBuilder.Base
 {
     /// <summary>
     /// Help file built
@@ -8,12 +10,31 @@
         /// <summary>
         /// File path
         /// </summary>
-        public string Path { get; set; } = string.Empty;
+        public string Path { get; set; } = "/";
 
         /// <summary>
         /// File name
         /// </summary>
-        public string Name { get; set; } = string.Empty;
+        private string name;
+
+        /// <summary>
+        /// File name
+        /// </summary>
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                // If file name does not finish a Markdown extension, add .md
+                if (!Regex.IsMatch(value, ".(?:md|markdown|mdown|markdn|workbook)$", RegexOptions.IgnoreCase))
+                {
+                    name = $"{value}.md";
+                }
+            }
+        }
 
         /// <summary>
         /// File content

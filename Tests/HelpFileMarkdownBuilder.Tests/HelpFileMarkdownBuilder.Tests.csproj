@@ -51,6 +51,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Sources\HelpFileMarkdownBuilder.Base\HelpFileMarkdownBuilder.Base.csproj">
+      <Project>{6397732c-b4cf-49d7-842f-8e80b52cdeb2}</Project>
+      <Name>HelpFileMarkdownBuilder.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Sources\HelpFileMarkdownBuilder.CSharp.Members\HelpFileMarkdownBuilder.CSharp.Members.csproj">
+      <Project>{5a37dbd5-9b3e-431a-9558-d613aeae0d15}</Project>
+      <Name>HelpFileMarkdownBuilder.CSharp.Members</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Sources\HelpFileMarkdownBuilder\HelpFileMarkdownBuilder.csproj">
       <Project>{70ef9d45-67be-4b0a-993f-534b2b9883c7}</Project>
       <Name>HelpFileMarkdownBuilder</Name>

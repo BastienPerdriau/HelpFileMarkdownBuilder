@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using HelpFileMarkdownBuilder.Base;
+using System.Collections.Generic;
 
 namespace HelpFileMarkdownBuilder.Tests
 {
@@ -22,6 +23,7 @@ namespace HelpFileMarkdownBuilder.Tests
             var l = Language.CSharp;
             l.BuildConfiguration = "Debug";
             //l.OnlyClassLibraries = true;
+
             HelpFileBuilder.BuildHelpFiles(examples, l);
         }
     }
