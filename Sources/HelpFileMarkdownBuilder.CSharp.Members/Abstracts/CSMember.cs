@@ -16,15 +16,5 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// Full name in XML documentation file
         /// </summary>
         public abstract string XmlFullName { get; }
-
-        /// <summary>
-        /// Name
-        /// </summary>
-        public string Name { get; set; } = string.Empty;
-
-        /// <summary>
-        /// Summary
-        /// </summary>
-        public string Summary { get; set; } = string.Empty;
     }
 }
