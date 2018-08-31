@@ -58,6 +58,7 @@
     <Compile Include="CSEnumeration.cs" />
     <Compile Include="CSEnumerationValue.cs" />
     <Compile Include="CSInterface.cs" />
+    <Compile Include="CSMemberCollection.cs" />
     <Compile Include="CSMemberSummary.cs" />
     <Compile Include="CSMethod.cs" />
     <Compile Include="CSNamespace.cs" />
@@ -68,6 +69,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Collections\" />
     <Folder Include="Enums\" />
   </ItemGroup>
   <ItemGroup>
