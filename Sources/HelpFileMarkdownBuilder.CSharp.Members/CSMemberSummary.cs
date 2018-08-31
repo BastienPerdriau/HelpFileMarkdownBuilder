@@ -56,12 +56,6 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         public CSMemberSummary() : base() { }
 
         /// <summary>
-        /// Constructor with list initializer
-        /// </summary>
-        /// <param name="members">Members</param>
-        public CSMemberSummary(IEnumerable<CSMember> members) : base(members) { }
-
-        /// <summary>
         /// Gets a summary of documented namespaces
         /// </summary>
         /// <returns>Summary of documented namespaces</returns>
