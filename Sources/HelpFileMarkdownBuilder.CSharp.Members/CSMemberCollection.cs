@@ -10,9 +10,14 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSMemberCollection : List<CSMember>
     {
         /// <summary>
+        /// API name
+        /// </summary>
+        public string ApiName { get; set; } = string.Empty;
+
+        /// <summary>
         /// API version
         /// </summary>
-        public string ApiVersion { get; set; }
+        public string ApiVersion { get; set; } = string.Empty;
 
         /// <summary>
         /// Gets the namespaces from the C-Sharp members collection
