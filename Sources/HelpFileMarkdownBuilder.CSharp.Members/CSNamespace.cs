@@ -1,6 +1,4 @@
-﻿using HelpFileMarkdownBuilder.Base;
-
-namespace HelpFileMarkdownBuilder.CSharp.Members
+﻿namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
     /// C# Namespace
@@ -8,9 +6,19 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSNamespace : CSTypeSubset
     {
         /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Namespace";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Namespaces";
+
+        /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{Name}.Namespace.md";
+        public override string FileName => $"{Name}.{SingleMemberTypeName}.md";
 
         /// <summary>
         /// Constructor

@@ -9,9 +9,19 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSEnumeration : CSType
     {
         /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Enumeration";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Enumeration";
+
+        /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{Namespace.Name}.{Name}.Enumeration.md";
+        public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
 
         /// <summary>
         /// List of values

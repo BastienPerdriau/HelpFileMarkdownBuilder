@@ -1,5 +1,4 @@
-﻿using HelpFileMarkdownBuilder.Base;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -9,9 +8,19 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSInterface : CSStrongType
     {
         /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Interface";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Interface";
+
+        /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{Namespace.Name}.{Name}.Interface.md";
+        public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
 
         /// <summary>
         /// Constructor

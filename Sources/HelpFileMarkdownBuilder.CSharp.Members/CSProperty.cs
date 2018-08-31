@@ -1,12 +1,20 @@
-﻿using HelpFileMarkdownBuilder.Base;
-
-namespace HelpFileMarkdownBuilder.CSharp.Members
+﻿namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
     /// C# Property
     /// </summary>
     public class CSProperty : CSStrongTypeMember
     {
+        /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Property";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Properties";
+
         /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
@@ -20,7 +28,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.Property.md";
+        public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.{SingleMemberTypeName}.md";
 
         // TODO Public / Private / ...
 

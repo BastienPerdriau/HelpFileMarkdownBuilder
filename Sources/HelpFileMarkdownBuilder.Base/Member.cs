@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace HelpFileMarkdownBuilder.Base
+﻿namespace HelpFileMarkdownBuilder.Base
 {
     /// <summary>
     /// Base class of a code member (class, method, ...)
@@ -17,11 +15,30 @@ namespace HelpFileMarkdownBuilder.Base
         /// </summary>
         public string Summary { get; set; } = string.Empty;
 
+        /// <summary>
+        /// Single member type name
+        /// </summary>
+        public abstract string SingleMemberTypeName { get; }
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public abstract string MultipleMemberTypeName { get; }
+
         #region Help File
         /// <summary>
         /// Member file name
         /// </summary>
         public abstract string FileName { get; }
+
+        /// <summary>
+        /// Gets a Markdown array row with Name and Summary
+        /// </summary>
+        /// <returns>Markdown array row</returns>
+        public string GetCoreMarkdown()
+        {
+            return $"|{Name}|{Summary}|";
+        }
 
         /// <summary>
         /// Gets the Markdown content for the current member

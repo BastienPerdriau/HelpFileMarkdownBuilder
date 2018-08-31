@@ -1,5 +1,4 @@
-﻿using HelpFileMarkdownBuilder.Base;
-using System.Reflection;
+﻿using System.Reflection;
 using System.Text.RegularExpressions;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
@@ -10,9 +9,19 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSAssembly : CSTypeSubset
     {
         /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Assembly";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Assemblies";
+
+        /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{Name}.Assembly.md";
+        public override string FileName => $"{Name}.{SingleMemberTypeName}.md";
 
         /// <summary>
         /// Constructor

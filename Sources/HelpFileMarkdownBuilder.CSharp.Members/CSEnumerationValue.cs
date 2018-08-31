@@ -1,12 +1,20 @@
-﻿using HelpFileMarkdownBuilder.Base;
-
-namespace HelpFileMarkdownBuilder.CSharp.Members
+﻿namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
     /// C# Enumeration value
     /// </summary>
     public class CSEnumerationValue : CSMember
     {
+        /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Enumeration value";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Enumeration values";
+
         /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
@@ -20,7 +28,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{Enumeration.Namespace.Name}.{Enumeration.Name}.{Name}.EnumerationValue.md";
+        public override string FileName => $"{Enumeration.Namespace.Name}.{Enumeration.Name}.{Name}.{SingleMemberTypeName}.md";
 
         /// <summary>
         /// Enumeration

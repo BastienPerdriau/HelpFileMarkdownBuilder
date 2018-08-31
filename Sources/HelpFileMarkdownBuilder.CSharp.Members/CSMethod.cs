@@ -1,12 +1,20 @@
-﻿using HelpFileMarkdownBuilder.Base;
-
-namespace HelpFileMarkdownBuilder.CSharp.Members
+﻿namespace HelpFileMarkdownBuilder.CSharp.Members
 {
     /// <summary>
     /// C# Method
     /// </summary>
     public class CSMethod : CSStrongTypeMember
     {
+        /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Method";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Methods";
+
         /// <summary>
         /// Prefix of the name in Xml documentation file
         /// </summary>
@@ -20,7 +28,7 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
         /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.Method.md";
+        public override string FileName => $"{StrongType.Namespace.Name}.{StrongType.Name}.{Name}.{SingleMemberTypeName}.md";
 
         // TODO Parameters
 

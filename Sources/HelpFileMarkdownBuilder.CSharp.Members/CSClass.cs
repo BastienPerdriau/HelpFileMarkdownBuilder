@@ -1,5 +1,4 @@
-﻿using HelpFileMarkdownBuilder.Base;
-using System.Reflection;
+﻿using System.Reflection;
 
 namespace HelpFileMarkdownBuilder.CSharp.Members
 {
@@ -9,9 +8,19 @@ namespace HelpFileMarkdownBuilder.CSharp.Members
     public class CSClass : CSStrongType
     {
         /// <summary>
+        /// Single member type name
+        /// </summary>
+        public override string SingleMemberTypeName => "Class";
+
+        /// <summary>
+        /// Multiple member type name
+        /// </summary>
+        public override string MultipleMemberTypeName => "Classes";
+
+        /// <summary>
         /// Member file name
         /// </summary>
-        public override string FileName => $"{Namespace.Name}.{Name}.Class.md";
+        public override string FileName => $"{Namespace.Name}.{Name}.{SingleMemberTypeName}.md";
 
         // TODO Static / Not
 
