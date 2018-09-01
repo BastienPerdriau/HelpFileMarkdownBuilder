@@ -3,7 +3,7 @@
     /// <summary>
     /// Base class of a code member (class, method, ...)
     /// </summary>
-    public class Member
+    public abstract class Member
     {
         /// <summary>
         /// Name
