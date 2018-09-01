@@ -10,6 +10,7 @@ You can review the status of every stage of the pipeline below.
 |Stage|Status|
 |-|-|
 |Build|![Build status](https://bastienperdriau.visualstudio.com/HelpFileMarkdownBuilder/_apis/build/status/HelpFileMarkdownBuilder-Build)|
+|Quality Gate|![Quality gate status](https://sonarcloud.io/api/project_badges/measure?project=BastienPerdriau_HelpFileMarkdownBuilder&metric=alert_status)|
 |VSTS Package Management|![Environment status](https://bastienperdriau.vsrm.visualstudio.com/_apis/public/Release/badge/88886f02-dd22-45d3-98c2-7caf61f39340/1/1)|
 |NuGet.org|![Environment status](https://bastienperdriau.vsrm.visualstudio.com/_apis/public/Release/badge/88886f02-dd22-45d3-98c2-7caf61f39340/1/2)|
 
