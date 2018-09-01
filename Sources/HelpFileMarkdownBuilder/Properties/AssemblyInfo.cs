@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("HelpFileMarkdownBuilder")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Markdown documentation builder for C# projects")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Bastien Perdriau")]
 [assembly: AssemblyProduct("HelpFileMarkdownBuilder")]

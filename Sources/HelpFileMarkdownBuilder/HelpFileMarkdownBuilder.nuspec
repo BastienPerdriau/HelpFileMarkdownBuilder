@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/BastienPerdriau/HelpFileMarkdownBuilder/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/BastienPerdriau/HelpFileMarkdownBuilder</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes>Release</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags>documentation documentation-generator xml csharp markdown</tags>
+  </metadata>
+  <files>
+    <file src="bin\Release\HelpFileMarkdownBuilder.Base.dll" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.Base.xml" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Builder.dll" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Builder.xml" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Members.dll" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Members.xml" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile.dll" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Serialization.CSProjFile.xml" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile.dll" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.CSharp.Serialization.XmlDocFile.xml" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.Serialization.SlnFile.dll" target="lib\net471" />
+    <file src="bin\Release\HelpFileMarkdownBuilder.Serialization.SlnFile.xml" target="lib\net471" />
+  </files>
+</package>
